@@ -8,6 +8,8 @@ From project root, run
 bash scripts/get_data.sh
 ```
 
+this may take 5000 years
+
 ## uv
 UV is the package manager for this project. To add a dependency, f.e. `pandas`, simply run:
 ```sh
