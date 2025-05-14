@@ -3,13 +3,14 @@ Repository for the Helsinki Digital Humanities hackathon 2025.
 
 ## uv
 UV is the package manager for this project. To add a dependency, f.e. `pandas`, simply run:
-
 ```sh
 uv add pandas
 ```
-
-this modifies `pyproject.toml` and `uv.lock`, so be sure to commit those as well. Then, to run the project, run:
-
+this modifies `pyproject.toml` and `uv.lock`, so be sure to commit those as well. After pulling changes to the forementioned files, run:
+```sh
+uv sync
+```
+ Then, to run the project, run:
 ```sh
 uv run path/to/python.py
 ```
