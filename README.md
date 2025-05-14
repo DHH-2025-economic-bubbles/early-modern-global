@@ -2,13 +2,22 @@
 Repository for the Helsinki Digital Humanities hackathon 2025.
 
 ## Downloading data
-From project root, run 
+From the project root, run the following command to download data files. For example to download `bl_newspapers_meta.txt` and `json_res.tar` run:
 
-```sh
-bash scripts/get_data.sh
+```bash
+bash scripts/get_data.sh bl_newspapers_meta.txt json_res.tar
 ```
 
-this may take 5000 years
+### Available file names:
+- `bl_newspapers_meta.txt`: Metadata for Burney and Nichols collections.
+- `bln-places.csv`: Contains publication title, collection, city, and 'Latitude,Longitude' for Burney and Nichols collections.
+- `burney-titles.csv`: List of all newspaper titles and issue dates in the Burney collection.
+- `nichols-titles.csv`: List of all newspaper titles and issue dates in the Nichols collection.
+- `chunks_for_blast.tar`: Text reuse across the newspapers.
+- `json_res.tar`: Newspaper details with OCRed texts.
+- `nichols_XML`: Newspaper details in XML format, including layout details (to be published later today).
+
+Make sure to navigate back to the project root after running the script.
 
 ## uv
 UV is the package manager for this project. To add a dependency, f.e. `pandas`, simply run:
