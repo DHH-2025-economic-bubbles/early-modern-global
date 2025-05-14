@@ -17,8 +17,6 @@ bash scripts/get_data.sh bl_newspapers_meta.txt json_res.tar
 - `json_res.tar`: Newspaper details with OCRed texts.
 - `nichols_XML`: Newspaper details in XML format, including layout details (to be published later today).
 
-Make sure to navigate back to the project root after running the script.
-
 ## uv
 UV is the package manager for this project. [Install it here before proceeding.](https://docs.astral.sh/uv/getting-started/installation/) To add a dependency, f.e. `pandas`, simply run:
 ```sh
