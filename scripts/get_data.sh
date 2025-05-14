@@ -17,9 +17,13 @@ download_file() {
             ;;
         "chunks_for_blast.tar")
             curl https://a3s.fi/dhh-newspaper/chunks_for_blast.tar > chunks_for_blast.tar
+            mkdir -p chunks_for_blast
+            tar -xvf chunks_for_blast.tar -C chunks_for_blast
             ;;
         "json_res.tar")
             curl https://a3s.fi/dhh-newspaper/json_res.tar > json_res.tar
+            mkdir -p json_res
+            tar -xvf json_res.tar -C json_res
             ;;
         "nichols_XML")
             curl https://a3s.fi/dhh-newspaper/nichols_XML > nichols_XML
