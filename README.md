@@ -1,6 +1,8 @@
 # early-modern-global
 Repository for the Helsinki Digital Humanities hackathon 2025.
 
+**All code should be ran from project root!**
+
 ## Downloading data
 From the project root, run the following command to download data files. For example to download `bl_newspapers_meta.txt` and `json_res.tar` run:
 
@@ -18,7 +20,12 @@ bash scripts/get_data.sh bl_newspapers_meta.txt json_res.tar
 - `nichols_XML`: Newspaper details in XML format, including layout details (to be published later today).
 
 ## uv
-UV is the package manager for this project. [Install it here before proceeding.](https://docs.astral.sh/uv/getting-started/installation/) To add a dependency, f.e. `pandas`, simply run:
+UV is the package manager for this project. **All python code is made to be ran through uv!** 
+
+[Install uv here before proceeding.](https://docs.astral.sh/uv/getting-started/installation/) 
+
+### Working with uv
+To add a dependency, f.e. `pandas`, simply run:
 ```sh
 uv add pandas
 ```
