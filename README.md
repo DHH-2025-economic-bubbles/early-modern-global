@@ -1,5 +1,12 @@
 # early-modern-global
-Repository for the Helsinki Digital Humanities hackathon 2025. 
+Repository for the Helsinki Digital Humanities hackathon 2025.
+
+## Downloading data
+From project root, run 
+
+```sh
+bash scripts/get_data.sh
+```
 
 ## uv
 UV is the package manager for this project. To add a dependency, f.e. `pandas`, simply run:
@@ -14,3 +21,4 @@ Then, to run the project, run:
 ```sh
 uv run path/to/python.py
 ```
+
