@@ -8,4 +8,8 @@ UV is the package manager for this project. To add a dependency, f.e. `pandas`, 
 uv add pandas
 ```
 
-this modifies `pyproject.toml` and `uv.lock`, so be sure to commit those as well. 
+this modifies `pyproject.toml` and `uv.lock`, so be sure to commit those as well. Then, to run the project, run:
+
+```sh
+uv run path/to/python.py
+```
