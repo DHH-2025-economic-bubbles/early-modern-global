@@ -10,7 +10,7 @@ this modifies `pyproject.toml` and `uv.lock`, so be sure to commit those as well
 ```sh
 uv sync
 ```
- Then, to run the project, run:
+Then, to run the project, run:
 ```sh
 uv run path/to/python.py
 ```
