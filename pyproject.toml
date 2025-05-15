@@ -3,11 +3,12 @@ name = "early-modern-global"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "ipykernel>=6.29.5",
     "matplotlib>=3.10.3",
     "pandas>=2.2.3",
     "polars>=1.29.0",
     "scikit-learn>=1.6.1",
+    "spacy>=3.8.5",
 ]

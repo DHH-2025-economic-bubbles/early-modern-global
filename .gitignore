@@ -4,4 +4,3 @@ data/*
 .venv/*
 dist
 .vscode/
-__pycache__/
