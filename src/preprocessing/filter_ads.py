@@ -13,7 +13,7 @@ def process_file(file_path):
         except json.JSONDecodeError as e:
             raise("cannot process the json: {file_path}, full error: {e}")
 
-        return [record for record in data if record.get("articleType") == "Classified ads"]
+        return [record for record in data if record.get("articleType") in ["Classified ads", "Advertisement", "Advertisements and Notices"]]
 
 def main():
     json_files = list(FOLDER_ARTICLES.glob("*.json"))

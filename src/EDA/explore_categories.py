@@ -36,9 +36,6 @@ def main():
     print("Article Type Frequencies:")
     for k, v in counter.items():
         print(f"{k}: {v}")
-
-    plt.gca().yaxis.set_major_formatter(FuncFormatter(format_thousands))
-
     # Plot and save to file
     plt.figure(figsize=(10, 6))
     plt.bar(counter.keys(), counter.values(), color='skyblue')
@@ -46,6 +43,10 @@ def main():
     plt.ylabel("Frequency")
     plt.title("Frequency of Article Types")
     plt.xticks(rotation=45, ha="right")
+
+    # Set the y-axis formatter AFTER creating the plot
+    plt.gca().yaxis.set_major_formatter(FuncFormatter(format_thousands))
+
     plt.tight_layout()
     plt.savefig(OUTPUT_IMAGE, dpi=300)
     print(f"Plot saved to: {OUTPUT_IMAGE}")
