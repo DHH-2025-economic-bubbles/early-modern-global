@@ -2,7 +2,7 @@
 import json
 import multiprocessing
 
-from settings import DATA_FOLDER, FOLDER_ARTICLES
+from src.settings import DATA_FOLDER, FOLDER_ARTICLES
 
 OUTPUT_FILE = DATA_FOLDER / "filtered_ads.json"
 
