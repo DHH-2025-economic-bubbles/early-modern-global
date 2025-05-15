@@ -1,4 +1,3 @@
-
 from pathlib import Path
 
 DATA_FOLDER = Path(__file__).parents[1] / ("data")
@@ -6,4 +5,4 @@ FOLDER_ARTICLES = DATA_FOLDER / "json_res/scratch/project_2005072/keshu/octavo-n
 
 FINDINGS_FOLDER = Path(__file__).parents[1] / ("findings")
 
-FILTERED_ADS = DATA_FOLDER / "filtered_ads.json"
+ADS_FOLDER = DATA_FOLDER / "ads"
