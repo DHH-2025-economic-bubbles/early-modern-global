@@ -43,6 +43,7 @@ def process_file(json_file):
                 word_counts["total_words"] = len(stemmed_words)
                 word_counts["issue_id"] = article.get("issueID", "unknown")
                 word_counts["article_id"] = article.get("articleID", "unknown")
+                word_counts["file_name"] = json_file.name
                 results[key] = word_counts
 
     except json.JSONDecodeError as e:
@@ -68,7 +69,7 @@ def create_frequency_json():
     print(f"Word counts saved to {output_path}")
 
 def calculate_tf_idf(df: pd.DataFrame) -> pd.DataFrame:
-    id_fields = ["issue_id", "article_id"]
+    id_fields = ["issue_id", "article_id", "file_name"]
     id_data = df[id_fields] if all(field in df.columns for field in id_fields) else None
 
     if 'total_words' in df.columns:
@@ -101,7 +102,7 @@ def create_tf_idf_csv():
 
 def main():
     print("Creating frequency JSON...")
-    #create_frequency_json()
+    create_frequency_json()
     print("Creating TF-IDF CSV...")
     create_tf_idf_csv()    
 
