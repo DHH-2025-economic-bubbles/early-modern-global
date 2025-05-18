@@ -6,7 +6,7 @@ import shutil
 import logging
 from multiprocessing import Pool, cpu_count
 
-from settings import DATA_FOLDER, ADS_FOLDER
+from settings import DATA_FOLDER, CLEANED_DATA_FOLDER
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -37,7 +37,7 @@ def find_matching_jsons(directory):
 
 if __name__ == "__main__":
     logger.info("Starting search for files containing 'india'")
-    matches = find_matching_jsons(ADS_FOLDER)
+    matches = find_matching_jsons(CLEANED_DATA_FOLDER)
     logger.info(f"Found {len(matches)} matching files.")
     
     # Create the destination folder if it doesn't exist

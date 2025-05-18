@@ -33,8 +33,7 @@ def detect_words_json_files(json_file):
         
         if not found_words:
             return None
-        # TODO do it in clean file
-        data["file_name"] = json_file.name
+
         data["found_words"] = found_words
         
         del data['text']
@@ -63,7 +62,7 @@ def create_frequency_json(folder_articles):
 
 def main():
     print("Creating frequency JSON...")
-    articles_files = DATA_FOLDER / "news"
+    articles_files = DATA_FOLDER / "cleaned_articles"
     create_frequency_json(articles_files)
   
 
