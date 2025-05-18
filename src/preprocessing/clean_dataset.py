@@ -10,18 +10,15 @@ from settings import CLEANED_DATA_FOLDER, DATA_FOLDER, FOLDER_ARTICLES
 
 BL_NEWSPAPERS_META: Path = DATA_FOLDER / "bl_newspapers_meta.csv"
 
-
 CLEANED_DATA_FOLDER: Path = DATA_FOLDER / "cleaned_articles"
 
 os.makedirs(CLEANED_DATA_FOLDER, exist_ok=True)
 
 print(f"{multiprocessing.cpu_count()} are available for processing")
 
-# Global variable for worker processes
 WORKER_META_DICT: Optional[Dict[str, Dict[str, Any]]] = None
 
 def init_worker(meta_dict_lookup: Dict[str, Dict[str, Any]]) -> None:
-    """Initialize worker process with shared metadata dictionary"""
     global WORKER_META_DICT
     WORKER_META_DICT = meta_dict_lookup
 
@@ -32,24 +29,20 @@ def process_file(file_path: Path) -> List[Dict[str, Any]]:
         except json.JSONDecodeError as e:
             raise json.JSONDecodeError(f"cannot process the json: {file_path}, full error: {e}")
         
-        
         return [record for record in data]
 
 def enrich_article(article: Dict[str, Any]) -> Tuple[str, bool]:
-    """Process and save a single ad with metadata"""
     global WORKER_META_DICT
     
     issue_id: str = article.get("issueID", "unknown")
     article_id: str = article.get("articleID", "unknown")
     newspaper_id: Optional[str] = article.get("articleID")
     
-    # Create filename using issueID and articleID
     filename: str = f"{issue_id}_{article_id}.json"
     filepath: Path = CLEANED_DATA_FOLDER / filename
     article["file_name"] = filename
     article["text"] = clean_text(article.get("text", ""))
     
-    # Add metadata to the ad json if found using dictionary lookup
     metadata_found: bool = False
     if newspaper_id is not None and WORKER_META_DICT is not None and newspaper_id in WORKER_META_DICT:
         meta_dict: Dict[str, Any] = WORKER_META_DICT[newspaper_id]
@@ -63,7 +56,6 @@ def enrich_article(article: Dict[str, Any]) -> Tuple[str, bool]:
     return filename, metadata_found
 
 def main() -> None:
-    #FOLDER_ARTICLES = Path("/home/cedric/repos/early-modern-global/data/test_preprocessing")
     json_files: List[Path] = list(FOLDER_ARTICLES.glob("*.json"))
     print(f"number of jsons: {len(json_files)}")
     
@@ -87,7 +79,6 @@ def main() -> None:
     
     print(f"Metadata dictionary created with {len(meta_dict_lookup)} entries")
     
-    
     for i, chunk in enumerate(batches, 1):
         print(f"Processing chunk {i}/{number_batches} with {len(chunk)} files...")
         
@@ -100,8 +91,7 @@ def main() -> None:
         
         print(f"Chunk {i} produced {len(chunk_results_flat)} articles")
         
-        with multiprocessing.Pool(#processes=max_workers, 
-                                  initializer=init_worker, 
+        with multiprocessing.Pool(initializer=init_worker, 
                                   initargs=(meta_dict_lookup,)) as pool:
             pool.map(enrich_article, chunk_results_flat)
     

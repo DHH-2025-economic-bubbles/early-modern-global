@@ -9,8 +9,7 @@ from concurrent.futures import ProcessPoolExecutor
 from nltk.stem import PorterStemmer
 
 STEMMER: PorterStemmer = PorterStemmer()
-LIST_WORDS: List[str] = [] # "negroes"
-#TEMMED_LIST_OF_WORDS = [STEMMER.stem(word) for word in LIST_WORDS]
+LIST_WORDS: List[str] = []
 
 gpkg_path: Path = DATA_FOLDER / "filtered_places.gpkg" 
 places_data: Dict[str, tuple[float, float]] = read_gpkg_to_dict(gpkg_path)
@@ -24,7 +23,6 @@ LIST_WORDS = [word.lower() for word in LIST_WORDS]
 def detect_words_json_files(json_file: Path) -> Optional[Dict[str, Any]]:
     with open(json_file, 'r', encoding='utf-8') as f:
         data: dict = json.load(f)
-        #stemmed_words = [STEMMER.stem(word) for word in data['text'].split()]
         words_data: Set[str] = set(data['text'].lower().split())
         
         found_words: List[str] = []
@@ -42,8 +40,6 @@ def detect_words_json_files(json_file: Path) -> Optional[Dict[str, Any]]:
         return data
 
 def create_frequency_json(folder_articles: Path) -> None:
-    
-    
     json_files: List[Path] = list(folder_articles.glob("*.json"))
     print(f"Number of JSON files: {len(json_files)}")
 
@@ -53,7 +49,6 @@ def create_frequency_json(folder_articles: Path) -> None:
         for file_result in executor.map(detect_words_json_files, json_files):
             if file_result is not None:
                 all_results.append(file_result)
-    #detect_words_json_files(json_files[0])
 
     DATA_FOLDER.mkdir(parents=True, exist_ok=True)
     output_path: Path = DATA_FOLDER / "detect_words.json"

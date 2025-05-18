@@ -8,17 +8,11 @@ from pathlib import Path
 from settings import DATA_FOLDER, TRADE_GAZETEER_RAW, WORLD_COUNTRIES_FILE
 
 def extract_single_point(geometry: Dict[str, Any]) -> Optional[Point]:
-    """
-    Extract a single point from GeometryCollection or MultiPoint.
-    If it's already a Point, return as is.
-    """
     if geometry['type'] == 'Point':
         return Point(geometry['coordinates'])
     elif geometry['type'] == 'MultiPoint':
-        # Take the first point
         return Point(geometry['coordinates'][0])
     elif geometry['type'] == 'GeometryCollection':
-        # Find the first Point or MultiPoint in the collection
         for geom in geometry['geometries']:
             if geom['type'] == 'Point':
                 return Point(geom['coordinates'])
@@ -27,15 +21,9 @@ def extract_single_point(geometry: Dict[str, Any]) -> Optional[Point]:
     return None
 
 def extract_date_from_when(when_obj: Optional[Dict[str, Any]]) -> Optional[str]:
-    """
-    Extract date information from the 'when' object.
-    Returns a string representation of the date/period.
-    Handles multiple formats including timespans with nested 'in' values.
-    """
-    if not when_obj:  # Empty object
+    if not when_obj:
         return None
     
-    # Handle timespans format (array of timespan objects)
     if 'timespans' in when_obj and when_obj['timespans']:
         timespans: List[Dict[str, Any]] = when_obj['timespans']
         date_ranges: List[str] = []
@@ -44,15 +32,12 @@ def extract_date_from_when(when_obj: Optional[Dict[str, Any]]) -> Optional[str]:
             start_year: Optional[int] = None
             end_year: Optional[int] = None
             
-            # Extract start year
             if 'start' in timespan and 'in' in timespan['start']:
                 start_year = timespan['start']['in']
             
-            # Extract end year
             if 'end' in timespan and 'in' in timespan['end']:
                 end_year = timespan['end']['in']
             
-            # Format the range
             if start_year is not None and end_year is not None:
                 if start_year == end_year:
                     date_ranges.append(str(start_year))
@@ -65,17 +50,12 @@ def extract_date_from_when(when_obj: Optional[Dict[str, Any]]) -> Optional[str]:
         
         return "; ".join(date_ranges) if date_ranges else None
     
-    # Handle original formats for backward compatibility
-    
-    # Check for start and end dates (original format)
     if 'start' in when_obj and 'end' in when_obj:
         return f"{when_obj['start']}-{when_obj['end']}"
     
-    # Check for single date
     if 'date' in when_obj:
         return str(when_obj['date'])
     
-    # Check for date-parts (array format like [[2023, 7, 5]])
     if 'date-parts' in when_obj and when_obj['date-parts']:
         date_part = when_obj['date-parts'][0]
         if isinstance(date_part, list) and len(date_part) > 0:
@@ -90,87 +70,58 @@ def extract_date_from_when(when_obj: Optional[Dict[str, Any]]) -> Optional[str]:
             else:
                 return str(year)
     
-    # Check for various other date representations
     if 'year' in when_obj:
         return str(when_obj['year'])
     
-    # If we can't parse it, return the string representation
     return str(when_obj)
 
 
 def check_time_filter(when_obj: Optional[Dict[str, Any]]) -> bool:
-    """
-    Check if the feature should be included based on the 'when' object.
-    Include if:
-    1. 'when' is empty ({})
-    2. 'when' contains time period between 1600 and 1800
-    """
-    if not when_obj:  # Empty object
+    if not when_obj:
         return True
     
-    # Handle timespans format (array of timespan objects)
     if 'timespans' in when_obj and when_obj['timespans']:
         timespans: List[Dict[str, Any]] = when_obj['timespans']
         
-        # Check if any timespan overlaps with 1600-1800
         for timespan in timespans:
             start_year: Optional[int] = None
             end_year: Optional[int] = None
             
-            # Extract start year
             if 'start' in timespan and 'in' in timespan['start']:
                 start_year = timespan['start']['in']
             
-            # Extract end year
             if 'end' in timespan and 'in' in timespan['end']:
                 end_year = timespan['end']['in']
             
-            # Check if this timespan overlaps with 1600-1800
             if start_year is not None and end_year is not None:
-                # Two ranges overlap if: max(start1, start2) <= min(end1, end2)
-                # Range 1: start_year to end_year
-                # Range 2: 1600 to 1800
                 if max(start_year, 1600) <= min(end_year, 1800):
                     return True
             elif start_year is not None:
-                # Only start year, check if it's in range
                 if 1600 <= start_year <= 1800:
                     return True
             elif end_year is not None:
-                # Only end year, check if it's in range
                 if 1600 <= end_year <= 1800:
                     return True
         
-        # If no timespan overlaps with 1600-1800, exclude this feature
         return False
     
-    # Handle original formats for backward compatibility
-    
-    # Check for start and end dates (original format)
     if 'start' in when_obj and 'end' in when_obj:
         start_year: int = when_obj.get('start', 0)
         end_year: int = when_obj.get('end', 9999)
-        # Check if the range overlaps with 1600-1800
         return max(start_year, 1600) <= min(end_year, 1800)
     
-    # If there's a single date
     if 'date' in when_obj:
         date_year: int = when_obj.get('date', 0)
         return 1600 <= date_year <= 1800
     
-    # Check for year
     if 'year' in when_obj:
         year: int = when_obj.get('year', 0)
         return 1600 <= year <= 1800
     
-    # Add more time parsing logic as needed
-    return True  # Default to include if time structure is unclear
+    return True
 
 
 def load_country_boundaries() -> Optional[gpd.GeoDataFrame]:
-    """
-    Load modern country boundaries from a source.
-    """
     try:
         countries: gpd.GeoDataFrame = gpd.read_file(WORLD_COUNTRIES_FILE)
         return countries
@@ -180,16 +131,10 @@ def load_country_boundaries() -> Optional[gpd.GeoDataFrame]:
         return None
 
 def get_country_centroids(countries_gdf: gpd.GeoDataFrame, countries_list: List[str], country_column: str = 'NAME') -> List[Dict[str, Any]]:
-    """
-    Get centroid points for each country in the list.
-    """
-    # Filter to target countries
     target_countries: gpd.GeoDataFrame = countries_gdf[countries_gdf[country_column].isin(countries_list)].copy()
     
-    # Calculate centroids
     target_countries['geometry'] = target_countries.geometry.centroid
     
-    # Create feature data for country centroids
     country_features: List[Dict[str, Any]] = []
     for _, row in target_countries.iterrows():
         feature_data: Dict[str, Any] = {
@@ -203,23 +148,16 @@ def get_country_centroids(countries_gdf: gpd.GeoDataFrame, countries_list: List[
     return country_features
 
 def filter_by_countries(gdf: gpd.GeoDataFrame, countries_list: List[str]) -> Tuple[gpd.GeoDataFrame, List[Dict[str, Any]]]:
-    """
-    Filter GeoDataFrame to keep only points within specified countries.
-    """
-    # Load country boundaries
     world: Optional[gpd.GeoDataFrame] = load_country_boundaries()
     
     if world is None:
         print("Could not load country boundaries. Skipping country filter.")
         return gdf, []
     
-    # Ensure both are in the same CRS
     world = world.to_crs(gdf.crs)
     
-    # Filter world data to only include our target countries
-    country_column: str = 'NAME'  # Adjust this based on your country data
+    country_column: str = 'NAME'
     
-    # Filter countries
     target_countries: gpd.GeoDataFrame = world[world[country_column].isin(countries_list)].copy()
     
     if len(target_countries) == 0:
@@ -227,16 +165,12 @@ def filter_by_countries(gdf: gpd.GeoDataFrame, countries_list: List[str]) -> Tup
         print(f"Available countries sample: {world[country_column].head().tolist()}")
         return gdf, []
     
-    # Get country centroids
     country_centroids: List[Dict[str, Any]] = get_country_centroids(world, countries_list, country_column)
     
-    # Perform spatial join to find points within countries
     points_with_countries: gpd.GeoDataFrame = gpd.sjoin(gdf, target_countries, how='inner', predicate='within')
     
-    # Add country name to the points
     points_with_countries['country'] = points_with_countries[country_column]
     
-    # Clean up the result by selecting only our desired columns
     result_columns: List[str] = ['name', 'country', 'date', 'geometry']
     points_with_countries = points_with_countries[result_columns]
     
@@ -246,10 +180,6 @@ def filter_by_countries(gdf: gpd.GeoDataFrame, countries_list: List[str]) -> Tup
     return points_with_countries, country_centroids
 
 def process_geojson_to_gpkg(input_files: List[Union[str, Path]], output_file: Union[str, Path], filter_countries: bool = True) -> int:
-    """
-    Process GeoJSON file and convert to GPKG with filtering and geometry conversion.
-    """
-    # Define target countries
     target_countries: List[str] = ['Sierra Leone', 'Gambia', 'Ghana', 'Nigeria', 'India', 'Sri Lanka', 'Malaysia',
     "United States of America",
     "Canada",
@@ -273,37 +203,27 @@ def process_geojson_to_gpkg(input_files: List[Union[str, Path]], output_file: Un
     "Panama"]
     
     features: List[Dict[str, Any]] = []
-    # Read the JSON file
     for input_file in input_files:
         with open(input_file, 'r', encoding='utf-8') as f:
             data: Dict[str, Any] = json.load(f)
             features.extend(data['features'])
     
-    # Prepare lists for the GeoDataFrame
     features_data: List[Dict[str, Any]] = []
     
-    # Process each feature
     for feature in features:
         properties: Dict[str, Any] = feature.get('properties', {})
-        # we remove short names because they create too many false positives
         if len(properties.get('title', '')) < 4:
             continue
-        # Check time filter
         when_obj: Optional[Dict[str, Any]] = feature.get('when', {})
         if not check_time_filter(when_obj):
             continue
         
-        # Extract geometry and convert to single point
         geometry: Dict[str, Any] = feature.get('geometry', {})
         point: Optional[Point] = extract_single_point(geometry)
         
         if point is None:
             continue
         
-        # Extract properties we want to keep
-        
-        
-        # Extract date from when object
         date_value: Optional[str] = extract_date_from_when(when_obj)
         
         feature_data: Dict[str, Any] = {
@@ -314,33 +234,27 @@ def process_geojson_to_gpkg(input_files: List[Union[str, Path]], output_file: Un
         
         features_data.append(feature_data)
     
-    # Create GeoDataFrame
     gdf: Optional[gpd.GeoDataFrame] = None
     if features_data:
         gdf = gpd.GeoDataFrame(features_data, crs='EPSG:4326')
         
-        # Filter by countries and get country centroids if requested
         if filter_countries and gdf is not None:
             gdf, country_centroids = filter_by_countries(gdf, target_countries)
             
-            # Add country centroids to the main dataframe
             if country_centroids and gdf is not None:
                 country_gdf: gpd.GeoDataFrame = gpd.GeoDataFrame(country_centroids, crs=gdf.crs)
                 gdf = pd.concat([gdf, country_gdf], ignore_index=True)
         
-        # Save to GPKG
         if gdf is not None:
             gdf['name'] = gdf['name'].str.lower()
             gdf.to_file(output_file, driver='GPKG')
             print(f"Successfully saved {len(gdf)} features to {output_file}")
             print(f"Columns in output: {list(gdf.columns)}")
             
-            # Show country distribution
             if 'country' in gdf.columns:
                 print("\nPoints per country:")
                 print(gdf['country'].value_counts())
                 
-            # Show date distribution
             if 'date' in gdf.columns:
                 print(f"\nDates found: {gdf['date'].notna().sum()} out of {len(gdf)} features")
                 print("Sample dates:")
@@ -350,11 +264,9 @@ def process_geojson_to_gpkg(input_files: List[Union[str, Path]], output_file: Un
     
     return len(gdf) if isinstance(gdf, gpd.GeoDataFrame) else 0
 
-# Usage example
 if __name__ == "__main__":
     output_file: Path = DATA_FOLDER / "filtered_places.gpkg"
     world_gazeteer: str = "/home/cedric/repos/early-modern-global/data/1298_black_20250515_174218.json"
     
-    # Run the conversion
     count: int = process_geojson_to_gpkg([TRADE_GAZETEER_RAW, world_gazeteer], output_file)
     print(f"Processed {count} features total.")
