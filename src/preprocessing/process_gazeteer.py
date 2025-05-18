@@ -325,6 +325,7 @@ def process_geojson_to_gpkg(input_files, output_file, filter_countries=True):
                 gdf = pd.concat([gdf, country_gdf], ignore_index=True)
         
         # Save to GPKG
+        gdf['name'] = gdf['name'].str.lower()
         gdf.to_file(output_file, driver='GPKG')
         print(f"Successfully saved {len(gdf)} features to {output_file}")
         print(f"Columns in output: {list(gdf.columns)}")

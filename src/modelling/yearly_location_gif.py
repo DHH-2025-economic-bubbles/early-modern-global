@@ -2,6 +2,8 @@ import os
 import re
 from PIL import Image
 
+from settings import FINDINGS_FOLDER
+
 def create_gif_from_yearly_pngs(input_folder='yearly_heatmaps', 
                                 output_path='heatmap_animation.gif',
                                 duration=1000,
@@ -145,8 +147,8 @@ if __name__ == "__main__":
     # Create basic GIF (1 second per frame)
     print("Creating basic animated GIF...")
     create_gif_from_yearly_pngs(
-        input_folder='/home/cedric/repos/early-modern-global/findings/year_heatmap',
-        output_path='/home/cedric/repos/early-modern-global/findings/heatmap_animation.gif',
+        input_folder=FINDINGS_FOLDER/'year_heatmap',
+        output_path=FINDINGS_FOLDER/'heatmap_animation.gif',
         duration=500
     )
     
