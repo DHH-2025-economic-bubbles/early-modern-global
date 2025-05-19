@@ -5,8 +5,8 @@ FOLDER_ARTICLES = DATA_FOLDER / "json_res/scratch/project_2005072/keshu/octavo-n
 
 FINDINGS_FOLDER = Path(__file__).parents[1] / ("findings")
 
-CLEANED_DATA_FOLDER = DATA_FOLDER / "ads"
 
+CLEANED_DATA_FOLDER = DATA_FOLDER / "cleaned_articles"
 FILE_POLITICAL_AFFILIATIONS = DATA_FOLDER / "burney-titles-political.csv"
 
 TRADE_GAZETEER_RAW = DATA_FOLDER / "1300_owtrad_20250515_115842.json"

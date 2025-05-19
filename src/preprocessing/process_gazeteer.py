@@ -7,6 +7,8 @@ from pathlib import Path
 
 from settings import DATA_FOLDER, TRADE_GAZETEER_RAW, WORLD_COUNTRIES_FILE
 
+# TODO remove ambiguous place that have (1) in the name. then remove the ones with spaces
+
 def extract_single_point(geometry: Dict[str, Any]) -> Optional[Point]:
     if geometry['type'] == 'Point':
         return Point(geometry['coordinates'])
@@ -122,14 +124,8 @@ def check_time_filter(when_obj: Optional[Dict[str, Any]]) -> bool:
 
 
 def load_country_boundaries() -> Optional[gpd.GeoDataFrame]:
-    try:
-        countries: gpd.GeoDataFrame = gpd.read_file(WORLD_COUNTRIES_FILE)
-        return countries
-    except Exception as e:
-        print(f"Error loading country boundaries: {e}")
-        print("Please ensure you have a countries dataset available")
-        return None
-
+    countries: gpd.GeoDataFrame = gpd.read_file(WORLD_COUNTRIES_FILE)
+    return countries
 def get_country_centroids(countries_gdf: gpd.GeoDataFrame, countries_list: List[str], country_column: str = 'NAME') -> List[Dict[str, Any]]:
     target_countries: gpd.GeoDataFrame = countries_gdf[countries_gdf[country_column].isin(countries_list)].copy()
     
@@ -200,9 +196,7 @@ def process_geojson_to_gpkg(input_files: List[Union[str, Path]], output_file: Un
     "Honduras",
     "Nicaragua",
     "Costa Rica",
-    "Panama",
-    "France", # we add two control countries
-    "Japan"]
+    "Panama",]
     
     features: List[Dict[str, Any]] = []
     for input_file in input_files:
