@@ -2,14 +2,22 @@ from preprocessing.utils import read_gpkg_to_dict
 from settings import DATA_FOLDER
 
 import json
-import os
 from typing import Dict, List, Set, Optional, Any
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor
 from nltk.stem import PorterStemmer
 
 STEMMER: PorterStemmer = PorterStemmer()
-LIST_WORDS: List[str] = []
+LIST_WORDS: List[str] = [
+    "furs",
+    "tobacco",
+    "rice",
+    "indigo",
+    "sugar",
+    "rum",
+    "molasses",
+    "negroes"
+]
 
 gpkg_path: Path = DATA_FOLDER / "filtered_places.gpkg" 
 places_data: Dict[str, tuple[float, float]] = read_gpkg_to_dict(gpkg_path)
