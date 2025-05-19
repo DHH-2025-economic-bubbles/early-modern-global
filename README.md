@@ -7,11 +7,11 @@ Repository for the Helsinki Digital Humanities hackathon 2025.
 From the project root, run the following command to download data files. For example to download `bl_newspapers_meta.txt` and `json_res.tar` run:
 
 ```bash
-bash scripts/get_data.sh bl_newspapers_meta.txt json_res.tar
+bash scripts/get_data.sh bl_newspapers_meta.csv json_res.tar
 ```
 
 ### Available file names:
-- `bl_newspapers_meta.txt`: Metadata for Burney and Nichols collections.
+- `bl_newspapers_meta.csv`: Metadata for Burney and Nichols collections.
 - `bln-places.csv`: Contains publication title, collection, city, and 'Latitude,Longitude' for Burney and Nichols collections.
 - `burney-titles.csv`: List of all newspaper titles and issue dates in the Burney collection.
 - `nichols-titles.csv`: List of all newspaper titles and issue dates in the Nichols collection.
