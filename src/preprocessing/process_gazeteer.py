@@ -94,13 +94,13 @@ def check_time_filter(when_obj: Optional[Dict[str, Any]]) -> bool:
                 end_year = timespan['end']['in']
             
             if start_year is not None and end_year is not None:
-                if max(start_year, 1600) <= min(end_year, 1800):
+                if max(int(start_year), 1600) <= min(int(end_year), 1800):
                     return True
             elif start_year is not None:
-                if 1600 <= start_year <= 1800:
+                if 1600 <= int(start_year) <= 1800:
                     return True
             elif end_year is not None:
-                if 1600 <= end_year <= 1800:
+                if 1600 <= int(end_year) <= 1800:
                     return True
         
         return False
@@ -200,7 +200,9 @@ def process_geojson_to_gpkg(input_files: List[Union[str, Path]], output_file: Un
     "Honduras",
     "Nicaragua",
     "Costa Rica",
-    "Panama"]
+    "Panama",
+    "France", # we add two control countries
+    "Japan"]
     
     features: List[Dict[str, Any]] = []
     for input_file in input_files:
