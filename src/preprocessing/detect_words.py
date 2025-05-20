@@ -8,6 +8,9 @@ from typing import Dict, List, Set, Optional, Any
 from pathlib import Path
 from concurrent.futures import ProcessPoolExecutor
 from nltk.stem import PorterStemmer
+from flashtext.keyword import KeywordProcessor
+
+from nltk.stem import PorterStemmer
 
 STEMMER: PorterStemmer = PorterStemmer()
 LIST_WORDS: List[str] = [
@@ -16,14 +19,24 @@ LIST_WORDS: List[str] = [
     "rice",
     "indigo",
     "sugar",
-    "rum",
     "molasses",
     "negroes",
+    "silk",
+    "peltry"
 ]
 
 gpkg_path: Path = DATA_FOLDER / "filtered_places.gpkg" 
 places_data: Dict[str, tuple[float, float]] = read_gpkg_to_dict(gpkg_path)
 places_names: List[str] = list(places_data.keys())
+
+places_with_space = [s for s in places_names if " " in s]
+places_without_space = [s.replace(" ", "") for s in places_with_space]
+
+places_names = [s for s in places_names if s not in places_with_space]
+
+places_with_space_dict = {}
+for place_without_space, place_with_space in sorted(zip(places_without_space, places_with_space)):
+    places_with_space_dict[place_without_space] = place_with_space
 
 LIST_WORDS.extend(places_names)
 
@@ -31,7 +44,11 @@ LIST_WORDS = [word.lower() for word in LIST_WORDS]
 
 OUTPUT_PATH: Path = DATA_FOLDER / "detect_words.jsonl"
 
-# OUTPUT_PATH = DATA_FOLDER / "detect_words_test.jsonl"
+#OUTPUT_PATH = DATA_FOLDER / "detect_words_test.jsonl"
+
+keyword_processor = KeywordProcessor()
+for k, w in zip(places_with_space, places_without_space):
+    keyword_processor.add_keyword(k, w)
 
 
 def get_json_files(root_folder:Path)->List[Path]:
@@ -48,21 +65,26 @@ def detect_words_json_files(json_file: Path) -> Optional[Dict[str, Any]]:
 
         data["found_words"] = []
         for text in data['texts']:
-
+            text = keyword_processor.replace_keywords(text)
             words_data: Set[str] = set(text.lower().split())
             
             found_words: List[str] = []
             for word in LIST_WORDS:
                 if word in words_data:
                     found_words.append(word)
+            for word in places_without_space:
+                if word in words_data:
+                    found_words.append(places_with_space_dict[word])
             
             if not found_words:
                 continue
-
             data["found_words"].append(found_words)
-            
+
+        if not data["found_words"]:
+            return None  
+        
         del data['texts']
-                
+
         return data
         
 def create_frequency_json(folder_articles: Path) -> None:
@@ -97,6 +119,7 @@ def create_frequency_json(folder_articles: Path) -> None:
         batch_results = []
         with ProcessPoolExecutor() as executor:
             for file_result in executor.map(detect_words_json_files, batch_files):
+
                 if file_result is not None:
                     batch_results.append(file_result)
 
