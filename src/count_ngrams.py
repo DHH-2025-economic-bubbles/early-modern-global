@@ -54,10 +54,12 @@ def get_term_ngram_context(articles, search_term, n_gram_window):
         for ng in this_ngrams:
             if search_term in ng:
                 ng_filtered.append(ng)
+        res_set = set()
         for ng in ng_filtered:
             for word in ng:
                 if (word != search_term) and word not in stopwords.words('english'):
-                    context_words.append(word)
+                    res_set.add(word)
+        context_words.extend(list(res_set))
     return Counter(context_words)
 
 

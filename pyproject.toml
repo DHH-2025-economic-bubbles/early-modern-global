@@ -14,8 +14,11 @@ dependencies = [
     "nltk>=3.9.1",
     "pandas>=2.2.3",
     "polars>=1.29.0",
+    "regex>=2024.11.6",
     "scikit-learn>=1.6.1",
     "scipy>=1.15.3",
+    "snowballstemmer>=3.0.1",
     "spacy>=3.8.5",
     "symspellpy>=6.9.0",
+    "tqdm>=4.67.1",
 ]
