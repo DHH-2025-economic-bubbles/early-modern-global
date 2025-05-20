@@ -1,3 +1,5 @@
+import glob
+import os
 from preprocessing.utils import read_gpkg_to_dict
 from settings import DATA_FOLDER
 
@@ -16,7 +18,7 @@ LIST_WORDS: List[str] = [
     "sugar",
     "rum",
     "molasses",
-    "negroes"
+    "negroes",
 ]
 
 gpkg_path: Path = DATA_FOLDER / "filtered_places.gpkg" 
@@ -27,46 +29,103 @@ LIST_WORDS.extend(places_names)
 
 LIST_WORDS = [word.lower() for word in LIST_WORDS]
 
+OUTPUT_PATH: Path = DATA_FOLDER / "detect_words.jsonl"
+
+# OUTPUT_PATH = DATA_FOLDER / "detect_words_test.jsonl"
+
+
+def get_json_files(root_folder:Path)->List[Path]:
+    # Using glob with recursive=True to find all JSON files
+    json_pattern = os.path.join(root_folder, '**', '*.json')
+    json_files = glob.glob(json_pattern, recursive=True)
+    
+    return json_files
+
 
 def detect_words_json_files(json_file: Path) -> Optional[Dict[str, Any]]:
     with open(json_file, 'r', encoding='utf-8') as f:
         data: dict = json.load(f)
-        words_data: Set[str] = set(data['text'].lower().split())
-        
-        found_words: List[str] = []
-        for word in LIST_WORDS:
-            if word in words_data:
-                found_words.append(word)
-        
-        if not found_words:
-            return None
 
-        data["found_words"] = found_words
-        
-        del data['text']
+        data["found_words"] = []
+        for text in data['texts']:
+
+            words_data: Set[str] = set(text.lower().split())
+            
+            found_words: List[str] = []
+            for word in LIST_WORDS:
+                if word in words_data:
+                    found_words.append(word)
+            
+            if not found_words:
+                continue
+
+            data["found_words"].append(found_words)
+            
+        del data['texts']
                 
         return data
-
+        
 def create_frequency_json(folder_articles: Path) -> None:
+
     json_files: List[Path] = list(folder_articles.glob("*.json"))
-    print(f"Number of JSON files: {len(json_files)}")
+    total_files = len(json_files)
+    print(f"Number of JSON files: {total_files}")
+    
+    # Calculate batch size
+    batch_size = max(1, total_files // 100)
+    
+    
+    
+    # Create empty output file if it doesn't exist
+    if not OUTPUT_PATH.exists():
+        OUTPUT_PATH.touch()
+    else:
+        OUTPUT_PATH.unlink()
+    
+    # Process in batches
+    for batch_num in range(100):
+        start_idx = batch_num * batch_size
+        end_idx = min((batch_num + 1) * batch_size, total_files)
+        
+        if start_idx >= total_files:
+            break
+            
+        batch_files = json_files[start_idx:end_idx]
 
-    all_results: List[Dict[str, Any]] = []
+        print(f"Processing batch {batch_num+1}/100: {len(batch_files)} files")
+        
+        batch_results = []
+        with ProcessPoolExecutor() as executor:
+            for file_result in executor.map(detect_words_json_files, batch_files):
+                if file_result is not None:
+                    batch_results.append(file_result)
 
-    with ProcessPoolExecutor() as executor:
-        for file_result in executor.map(detect_words_json_files, json_files):
-            if file_result is not None:
-                all_results.append(file_result)
+        # for file in json_files:
+            
+        #     data = detect_words_json_files(file)
+        #     if not data:
+        #         continue
+        #     with open(OUTPUT_PATH, "a", encoding="utf-8") as f:
+        #         f.write(json.dumps(data, ensure_ascii=False) + "\n")
 
-    DATA_FOLDER.mkdir(parents=True, exist_ok=True)
-    output_path: Path = DATA_FOLDER / "detect_words.json"
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(all_results, f, ensure_ascii=False, indent=2)
-    print(f"Word counts saved to {output_path}")
+    
+        # Append new batch results directly to the file, one JSON object per line
+        with open(OUTPUT_PATH, "a", encoding="utf-8") as f:
+            for result in batch_results:
+                f.write(json.dumps(result, ensure_ascii=False) + "\n")
+        
+        print(f"Batch {batch_num+1} completed: Added {len(batch_results)} files")
+        
+        # Clear memory
+        del batch_results
+    
+    print(f"All batches completed. Results saved to {OUTPUT_PATH}")
+
 
 def main() -> None:
     print("Creating frequency JSON...")
     articles_files: Path = DATA_FOLDER / "cleaned_articles"
+    #articles_files = Path(Path("/home/cedric/repos/early-modern-global/data/cleaned_articles_test"))
     create_frequency_json(articles_files)
   
 
