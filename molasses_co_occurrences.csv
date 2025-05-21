@@ -1,0 +1,190 @@
+time_interval,location,co_occurrence_frequency
+1680_1684,carrier,1
+1680_1684,maine,1
+1695_1699,hurling,1
+1695_1699,maine,1
+1695_1699,miami,1
+1695_1699,oregon,1
+1700_1704,baltimore,1
+1700_1704,barbados,2
+1700_1704,new england,1
+1710_1714,belize,1
+1710_1714,maine,1
+1710_1714,virginia,1
+1715_1719,maine,4
+1720_1724,barbados,2
+1720_1724,new england,2
+1720_1724,new york,2
+1720_1724,newfoundland,1
+1725_1729,barbados,20
+1725_1729,boston,6
+1725_1729,long island,2
+1725_1729,new england,4
+1725_1729,new york,2
+1725_1729,rhode island,1
+1730_1734,barbados,2
+1730_1734,boston,7
+1730_1734,carrier,2
+1730_1734,maine,4
+1730_1734,maryland,1
+1730_1734,new england,7
+1730_1734,new jersey,4
+1730_1734,new york,4
+1730_1734,newfoundland,2
+1730_1734,pennsylvania,1
+1730_1734,philadelphia,3
+1730_1734,silk,1
+1730_1734,virginia,1
+1735_1739,new england,1
+1735_1739,silk,1
+1740_1744,florida,2
+1740_1744,maine,1
+1740_1744,new england,3
+1740_1744,philadelphia,3
+1745_1749,connecticut,1
+1745_1749,hubli,1
+1745_1749,new england,1
+1745_1749,new york,1
+1750_1754,new england,1
+1750_1754,philadelphia,1
+1755_1759,barbados,1
+1755_1759,connecticut,1
+1755_1759,fort william,1
+1755_1759,maine,1
+1755_1759,maryland,1
+1755_1759,new york,3
+1755_1759,quebec,4
+1755_1759,silk,3
+1755_1759,virginia,1
+1760_1764,barbados,2
+1760_1764,boston,1
+1760_1764,dominica,1
+1760_1764,maine,4
+1760_1764,mobile,1
+1760_1764,new england,7
+1760_1764,newfoundland,5
+1760_1764,philadelphia,2
+1760_1764,virginia,1
+1765_1769,barbados,1
+1765_1769,boston,3
+1765_1769,carrier,1
+1765_1769,maine,2
+1765_1769,maryland,2
+1765_1769,new england,4
+1765_1769,new york,5
+1765_1769,newfoundland,2
+1765_1769,philadelphia,1
+1765_1769,silk,4
+1765_1769,south carolina,2
+1765_1769,virginia,2
+1770_1774,boston,5
+1770_1774,idaho,1
+1770_1774,north carolina,1
+1770_1774,quebec,1
+1770_1774,st lucia,2
+1775_1779,baltimore,8
+1775_1779,barbados,1
+1775_1779,biloxi,1
+1775_1779,boston,10
+1775_1779,cayes,1
+1775_1779,connecticut,1
+1775_1779,delaware,11
+1775_1779,delhi,3
+1775_1779,fort william,2
+1775_1779,grenada,1
+1775_1779,halifax,6
+1775_1779,maine,3
+1775_1779,maryland,11
+1775_1779,montreal,1
+1775_1779,new england,7
+1775_1779,new haven,1
+1775_1779,new orleans,1
+1775_1779,new york,16
+1775_1779,newfoundland,4
+1775_1779,north carolina,6
+1775_1779,nova scotia,3
+1775_1779,ontario,1
+1775_1779,philadelphia,30
+1775_1779,quebec,6
+1775_1779,rhode island,3
+1775_1779,south carolina,18
+1775_1779,st lucia,6
+1775_1779,virginia,15
+1780_1784,baltimore,1
+1780_1784,boston,1
+1780_1784,calgary,1
+1780_1784,delaware,2
+1780_1784,flathead,1
+1780_1784,florida,1
+1780_1784,grenada,2
+1780_1784,halifax,1
+1780_1784,maine,2
+1780_1784,new england,1
+1780_1784,new jersey,1
+1780_1784,new orleans,1
+1780_1784,new york,3
+1780_1784,nova scotia,1
+1780_1784,pennsylvania,1
+1780_1784,philadelphia,6
+1780_1784,rhode island,1
+1780_1784,st lucia,1
+1780_1784,virginia,1
+1785_1789,alberta,1
+1785_1789,barbados,1
+1785_1789,boston,3
+1785_1789,cayes,3
+1785_1789,honduras,2
+1785_1789,maine,2
+1785_1789,newfoundland,1
+1785_1789,quebec,3
+1785_1789,silk,1
+1790_1794,cascades,1
+1790_1794,cayes,1
+1790_1794,charlotte,1
+1790_1794,connecticut,1
+1790_1794,dominica,2
+1790_1794,hartford,1
+1790_1794,maine,2
+1790_1794,miami,1
+1790_1794,new haven,1
+1790_1794,new york,4
+1790_1794,newfoundland,2
+1790_1794,st lucia,1
+1790_1794,tobago,1
+1790_1794,toronto,1
+1790_1794,united states of america,1
+1790_1794,virginia,1
+1795_1799,austin,1
+1795_1799,barbados,10
+1795_1799,boston,5
+1795_1799,charlotte,2
+1795_1799,delhi,1
+1795_1799,dominica,4
+1795_1799,grenada,15
+1795_1799,guiana,3
+1795_1799,halifax,4
+1795_1799,idaho,1
+1795_1799,kingston,1
+1795_1799,maine,3
+1795_1799,maryland,1
+1795_1799,newfoundland,5
+1795_1799,niger,1
+1795_1799,philadelphia,5
+1795_1799,south carolina,6
+1795_1799,texas,1
+1795_1799,tobago,5
+1795_1799,trinidad,1
+1795_1799,tripura,1
+1795_1799,virginia,2
+1800_1804,barbados,3
+1800_1804,boise,1
+1800_1804,dominica,2
+1800_1804,grenada,2
+1800_1804,maine,3
+1800_1804,malacca,1
+1800_1804,miami,1
+1800_1804,newfoundland,1
+1800_1804,ontario,1
+1800_1804,quebec,1
+1800_1804,tobago,2
+1800_1804,trinidad,2
