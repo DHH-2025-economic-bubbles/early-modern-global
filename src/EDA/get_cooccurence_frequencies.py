@@ -5,6 +5,9 @@ from datetime import datetime
 from collections import Counter
 import ast
 from settings import FOLDER_ARTICLES, DATA_FOLDER
+import csv
+import settings
+from collections import defaultdict
 
 def extract_year(entry):
     date_str = entry.get("meta_issue_date_start")
@@ -109,6 +112,84 @@ def generate_cooccurence_csv(path_json):
         json.dump(goodloc_cooccurrence, f, indent=2)
     with open(DATA_FOLDER / 'goodgood_counts.json', 'w', encoding='utf-8') as f:
         json.dump(goodgood_cooccurence, f, indent=2)
+def convert_cooccurrence(exclude_countries=True):
+    #convert co occurence into file format as Ila requested to generate geo visualizations
+
+    with open(DATA_FOLDER / 'goodloc_counts.json', 'r', encoding='utf-8') as f:
+        data = json.load(f)
+
+
+    PREDEFINED_COUNTRIES=['india',
+                'japan',
+                'nigeria',
+                'guyana',
+                'georgia',
+                'ghana',
+                'jamaica',
+                'haiti',
+                'canada',
+                'nicaragua',
+                'panama',
+                'france']
+    
+    PREDEFINED_GOODS = [
+                    "furs",
+                    "tobacco",
+                    "rice",
+                    "indigo",
+                    "sugar",
+                    "rum",
+                    "molasses",
+                    "negroes"]
+    
+
+    goods_data = defaultdict(list)
+
+
+    for time_interval, co_occurrences in data.items():
+        for pair, count in co_occurrences.items():
+        
+            try:
+                item1, item2 = eval(pair)
+            except:
+                continue
+
+        
+            good = None
+            location = None
+            if exclude_countries==True:
+                if item1 in PREDEFINED_GOODS and item2 not in PREDEFINED_COUNTRIES and item2 not in PREDEFINED_GOODS:
+                    good = item1
+                    location = item2
+                elif item2 in PREDEFINED_GOODS and item1 not in PREDEFINED_COUNTRIES and item1 not in PREDEFINED_GOODS:
+                    good = item2
+                    location = item1
+            elif exclude_countries==False:
+                if item1 in PREDEFINED_GOODS and item2 not in PREDEFINED_GOODS:
+                    good = item1
+                    location = item2
+                elif item2 in PREDEFINED_GOODS and item1 not in PREDEFINED_GOODS:
+                    good = item2
+                    location = item1
+
+            if good and location:
+                goods_data[good].append({
+                    'time_interval': time_interval,
+                    'location': location,
+                    'co_occurrence_frequency': count
+                })
+    for good, rows in goods_data.items():
+        filename = f"{good}_co_occurrences.csv"
+        sorted_rows = sorted(rows, key=lambda x: (x['time_interval'], x['location']))
+        with open(filename, 'w', newline='') as csvfile:
+            fieldnames = ['time_interval', 'location', 'co_occurrence_frequency']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(sorted_rows)
+
+        print(f"Created {filename} with {len(sorted_rows)} rows")
+    
 
 if __name__=="__main__":
     generate_cooccurence_csv(FOLDER_ARTICLES / "detect_words.json")
+    convert_cooccurrence()
