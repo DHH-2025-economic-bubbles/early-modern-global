@@ -9,30 +9,43 @@ from tqdm import tqdm
 import pandas as pd
 
 
-nltk.download('stopwords')
+#nltk.download('stopwords')
 
 
 def get_file_articles(floc):
-    with open(floc, 'r') as jsonfile:
-        res = json.load(jsonfile)
+    try:
+        with open(floc, 'r', encoding='utf-8') as jsonfile:
+            res = json.load(jsonfile)
+    except json.JSONDecodeError:
+        return None
     return res
 
 
 def get_articles(files_list):
+    articles = []
     for file in files_list:
-        articles.extend(get_file_articles(file))
+        res = get_file_articles(file)
+        if res is not None:
+            article_meta = dict()
+            for k, v in res.items():
+                if k != 'texts':
+                    article_meta[k] = v
+            for item in res['texts']:
+                this_res = article_meta.copy()
+                this_res['text'] = item               
+                articles.append(this_res)
     return articles
 
 
-def get_clean_text(article):
-    pattern = re.compile('[\W_]+')
-    text = article['text'].split()
-    processed = list()
-    for item in text:
-        processed_item = pattern.sub('', item.lower())
-        if len(processed_item) > 0:
-            processed.append(processed_item)
-    return processed
+#def get_clean_text(article):
+#    pattern = re.compile('[\W_]+')
+#    text = article['text'].split()
+#    processed = list()
+#    for item in text:
+#        processed_item = pattern.sub('', item.lower())
+#        if len(processed_item) > 0:
+#            processed.append(processed_item)
+#    return processed
 
 
 def filter_articles(articles, search_term, article_types=None):
@@ -41,7 +54,7 @@ def filter_articles(articles, search_term, article_types=None):
         if article_types is not None:
             if article['articleType'] not in article_types:
                 pass
-        if search_term in article['text'].lower():
+        if search_term in article['text']:
             articles_filtered.append(article)
     return articles_filtered
 
@@ -49,7 +62,7 @@ def filter_articles(articles, search_term, article_types=None):
 def get_term_ngram_context(articles, search_term, n_gram_window):
     context_words = list()
     for article in tqdm(articles):
-        this_ngrams = list(ngrams(get_clean_text(article), n_gram_window))
+        this_ngrams = list(ngrams(article['text'].split(), n_gram_window))
         ng_filtered = list()
         for ng in this_ngrams:
             if search_term in ng:
@@ -63,24 +76,30 @@ def get_term_ngram_context(articles, search_term, n_gram_window):
     return Counter(context_words)
 
 
-jsonfiles = glob("data/json_res/*.json")
-articles = get_articles(jsonfiles[:10000])
-articles_f = filter_articles(articles, 'sugar', ['Classified ads', 'Advertisement'])
+def get_filelist_by_decade(files, filter_decade):
+    files_of_interest = list()
+    for file in tqdm(files):
+        content = get_file_articles(file)
+        if (content is None) or (len(content) == 0):
+            continue
+        if content["meta_issue_date_start"][:3] == filter_decade[:3]:
+            files_of_interest.append(file)
+    return files_of_interest
 
 
-search_term = "sugar"
-articles_f = filter_articles(articles, search_term, ['Classified ads', 'Advertisement'])
-sugar_context = get_term_ngram_context(articles_f, search_term, 3)
-sugar_df = pd.DataFrame.from_dict(sugar_context, orient='index').reset_index()
+# meta_df = pd.read_csv("early-modern-global/bl_newspapers_meta.csv")
+# meta_df.loc[(meta_df["issue_date_start"].str[:3] == "171"), ["article_id"]]
+
+jsonfiles = glob("ads_1/1/*.json")
+
+files_of_interest = get_filelist_by_decade(jsonfiles, filter_decade="1700")
+articles = get_articles(files_of_interest)
 
 search_term = "tobacco"
 articles_f = filter_articles(articles, search_term, ['Classified ads', 'Advertisement'])
-tobacco_context = get_term_ngram_context(articles_f, search_term, 3)
-tobacco_df = pd.DataFrame.from_dict(tobacco_context, orient='index').reset_index()
-
-search_term = "coffee"
-articles_f = filter_articles(articles, search_term, ['Classified ads', 'Advertisement'])
-coffee_context = get_term_ngram_context(articles_f, search_term, 3)
-coffee_df = pd.DataFrame.from_dict(coffee_context, orient='index').reset_index()
-
+sugar_context = get_term_ngram_context(articles_f, search_term, 3)
+sugar_df = pd.DataFrame.from_dict(sugar_context, orient='index').reset_index()
+sugar_df.rename({'index': 'term', 0: 'count'}, axis=1, inplace=True)
+sugar_df.sort_values(by=0, inplace=True, ascending=False)
+sugar_df.to_csv("./test.csv", index=False)
 
