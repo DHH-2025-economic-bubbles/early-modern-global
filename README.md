@@ -33,8 +33,33 @@ this modifies `pyproject.toml` and `uv.lock`, so be sure to commit those as well
 ```sh
 uv sync
 ```
-Then, to run the project, run:
+<!-- Then, to run the project, run:
 ```sh
 uv run path/to/python.py
+``` -->
+
+## Preprocess data
+The original data has poor OCR quality, significant noise, and inaccurate segmentation. As a first step, we apply preprocessing techniques to clean the data. This includes correcting spelling errors, joining hyphenated words, and segmenting articles into coherent paragraphs.
+```sh
+python -m src.preprocessing.clean_dataset
 ```
 
+## Famous Figures Exploration: extract famous individuals from newspaper. Who are they? How are they related?
+
+### Article Extraction Based on Keywords
+Using pre-defined lists of goods and locations associated with colonial trade, we extract articles that contain at least one keyword. These articles are saved along with their metadata
+```sh
+python -m src.preprocessing.detect_words
+```
+
+### Article Filtering Based on Country
+From the articles extracted in the previous step, we further filter them by identifying country mentions within the text
+```sh
+python -m src.preprocessing.extract_country_paragraphs
+```
+
+### Famous Figures Extraction
+We then Named Entity Recognition (NER) to extract mentions of historically significant individuals related to each country
+```sh
+python -m src.preprocessing.ner
+```
