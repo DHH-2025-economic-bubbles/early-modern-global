@@ -1,0 +1,1465 @@
+time_interval,location,co_occurrence_frequency
+1620_1624,ambala,1
+1645_1649,calicut,1
+1650_1654,alexandria,1
+1650_1654,barbados,1
+1665_1669,ambala,1
+1665_1669,barbados,1
+1665_1669,granada,1
+1665_1669,maine,1
+1665_1669,tobago,2
+1670_1674,madras,1
+1675_1679,ambala,1
+1675_1679,barbados,1
+1675_1679,maine,1
+1675_1679,silk,1
+1675_1679,surat,1
+1675_1679,tobago,1
+1675_1679,virginia,1
+1680_1684,ambala,1
+1680_1684,barbados,1
+1680_1684,camden,1
+1680_1684,florida,1
+1680_1684,ganges,2
+1680_1684,hartford,1
+1680_1684,maine,1
+1680_1684,silk,4
+1680_1684,virginia,2
+1685_1689,acton,1
+1685_1689,alexandria,1
+1685_1689,boston,1
+1685_1689,colorado,1
+1685_1689,illinois,1
+1685_1689,maine,2
+1685_1689,new haven,1
+1685_1689,silk,3
+1690_1694,atlanta,1
+1690_1694,barbados,4
+1690_1694,carrier,1
+1690_1694,maine,1
+1690_1694,patna,1
+1690_1694,virginia,1
+1695_1699,acadia,1
+1695_1699,alexandria,4
+1695_1699,bahamas,1
+1695_1699,barbados,1
+1695_1699,gambia,1
+1695_1699,ganges,1
+1695_1699,maine,5
+1695_1699,raleigh,2
+1700_1704,alaska,1
+1700_1704,ambala,1
+1700_1704,arapaho,2
+1700_1704,arizona,1
+1700_1704,atlanta,1
+1700_1704,bahamas,2
+1700_1704,barbados,6
+1700_1704,boston,2
+1700_1704,carrier,3
+1700_1704,cayes,2
+1700_1704,ceylon,1
+1700_1704,delhi,1
+1700_1704,detroit,1
+1700_1704,florida,2
+1700_1704,frankfort,1
+1700_1704,gambia,1
+1700_1704,ganges,1
+1700_1704,indiana,1
+1700_1704,madura,1
+1700_1704,maine,3
+1700_1704,malacca,1
+1700_1704,maryland,3
+1700_1704,mobile,1
+1700_1704,new england,2
+1700_1704,new york,2
+1700_1704,niger,1
+1700_1704,ottawa,1
+1700_1704,silk,1
+1700_1704,st louis,1
+1700_1704,texas,1
+1700_1704,virginia,6
+1705_1709,alberta,1
+1705_1709,alexandria,1
+1705_1709,barbados,5
+1705_1709,bhopal,1
+1705_1709,cayes,1
+1705_1709,frankfort,1
+1705_1709,gambia,3
+1705_1709,maine,5
+1705_1709,malacca,2
+1705_1709,maryland,2
+1705_1709,miami,1
+1705_1709,mobile,1
+1705_1709,new england,4
+1705_1709,new york,1
+1705_1709,niger,1
+1705_1709,silk,3
+1705_1709,surat,1
+1705_1709,tobago,1
+1705_1709,virginia,4
+1710_1714,alexandria,4
+1710_1714,baltimore,3
+1710_1714,barbados,21
+1710_1714,boston,2
+1710_1714,carrier,1
+1710_1714,cayes,2
+1710_1714,dallas,1
+1710_1714,florida,1
+1710_1714,gambia,1
+1710_1714,jaipur,1
+1710_1714,kingston,8
+1710_1714,louisiana,1
+1710_1714,mackenzie,3
+1710_1714,madras,1
+1710_1714,madura,2
+1710_1714,maine,11
+1710_1714,maryland,1
+1710_1714,miami,1
+1710_1714,new england,1
+1710_1714,new york,2
+1710_1714,pensacola,1
+1710_1714,quebec,1
+1710_1714,silk,3
+1710_1714,texas,1
+1715_1719,abuja,1
+1715_1719,acadia,1
+1715_1719,alexandria,11
+1715_1719,ambala,5
+1715_1719,austin,2
+1715_1719,bahamas,1
+1715_1719,barbados,21
+1715_1719,belize,1
+1715_1719,boston,10
+1715_1719,calabar,2
+1715_1719,calgary,1
+1715_1719,camden,1
+1715_1719,carrier,2
+1715_1719,cayes,3
+1715_1719,charlotte,1
+1715_1719,dallas,5
+1715_1719,delhi,2
+1715_1719,denver,2
+1715_1719,houston,3
+1715_1719,hurling,1
+1715_1719,kingston,1
+1715_1719,long island,1
+1715_1719,louisiana,6
+1715_1719,mackenzie,1
+1715_1719,maine,11
+1715_1719,maryland,4
+1715_1719,massachusetts,2
+1715_1719,mississippi,5
+1715_1719,mobile,1
+1715_1719,new england,16
+1715_1719,new orleans,4
+1715_1719,new york,7
+1715_1719,newfoundland,3
+1715_1719,north carolina,7
+1715_1719,nova scotia,1
+1715_1719,pensacola,1
+1715_1719,philadelphia,4
+1715_1719,quebec,3
+1715_1719,regina,1
+1715_1719,silk,10
+1715_1719,south carolina,7
+1715_1719,trinidad,7
+1715_1719,virginia,9
+1720_1724,acadia,1
+1720_1724,accra,1
+1720_1724,ambala,3
+1720_1724,austin,1
+1720_1724,bahamas,2
+1720_1724,barbados,40
+1720_1724,belize,4
+1720_1724,bengal,3
+1720_1724,boston,76
+1720_1724,calabar,10
+1720_1724,camden,2
+1720_1724,cascades,1
+1720_1724,cayes,9
+1720_1724,cleveland,1
+1720_1724,connecticut,5
+1720_1724,delhi,2
+1720_1724,dominica,1
+1720_1724,florida,2
+1720_1724,gambia,11
+1720_1724,ganges,3
+1720_1724,grenada,6
+1720_1724,halifax,7
+1720_1724,honduras,11
+1720_1724,idaho,3
+1720_1724,kingston,33
+1720_1724,long island,4
+1720_1724,louisiana,1
+1720_1724,ludhiana,1
+1720_1724,maine,21
+1720_1724,malacca,2
+1720_1724,maryland,27
+1720_1724,miami,2
+1720_1724,michigan,1
+1720_1724,mississippi,2
+1720_1724,mobile,2
+1720_1724,montana,1
+1720_1724,new calabar,9
+1720_1724,new england,60
+1720_1724,new hampshire,1
+1720_1724,new york,40
+1720_1724,newfoundland,11
+1720_1724,niger,3
+1720_1724,north carolina,3
+1720_1724,nova scotia,1
+1720_1724,pensacola,1
+1720_1724,quebec,1
+1720_1724,raleigh,1
+1720_1724,rhode island,6
+1720_1724,silk,3
+1720_1724,south carolina,3
+1720_1724,st lucia,8
+1720_1724,sudbury,2
+1720_1724,surat,1
+1720_1724,texas,2
+1720_1724,tobago,33
+1720_1724,trinidad,25
+1720_1724,vermont,3
+1720_1724,virginia,97
+1725_1729,ambala,1
+1725_1729,austin,1
+1725_1729,baltimore,5
+1725_1729,barbados,61
+1725_1729,bengal,4
+1725_1729,biloxi,1
+1725_1729,boise,1
+1725_1729,boston,34
+1725_1729,camden,6
+1725_1729,cayes,5
+1725_1729,charlotte,2
+1725_1729,dallas,6
+1725_1729,denver,3
+1725_1729,detroit,2
+1725_1729,dominica,5
+1725_1729,florida,16
+1725_1729,gambia,4
+1725_1729,ganges,6
+1725_1729,granada,1
+1725_1729,grenada,1
+1725_1729,hartford,1
+1725_1729,honduras,24
+1725_1729,houston,1
+1725_1729,idaho,2
+1725_1729,indiana,1
+1725_1729,kingston,13
+1725_1729,louisiana,4
+1725_1729,maine,29
+1725_1729,maryland,12
+1725_1729,montreal,1
+1725_1729,new england,65
+1725_1729,new hampshire,2
+1725_1729,new orleans,2
+1725_1729,new york,12
+1725_1729,newfoundland,13
+1725_1729,oregon,1
+1725_1729,philadelphia,8
+1725_1729,regina,1
+1725_1729,rhode island,9
+1725_1729,silk,7
+1725_1729,south carolina,56
+1725_1729,surat,3
+1725_1729,texas,2
+1725_1729,vermont,1
+1725_1729,virginia,13
+1730_1734,alexandria,2
+1730_1734,ambala,3
+1730_1734,arkansas,1
+1730_1734,barbados,95
+1730_1734,belize,1
+1730_1734,bengal,1
+1730_1734,boston,53
+1730_1734,calabar,23
+1730_1734,carrier,1
+1730_1734,cayes,3
+1730_1734,ceylon,1
+1730_1734,charlotte,1
+1730_1734,cleveland,2
+1730_1734,dallas,19
+1730_1734,delhi,4
+1730_1734,dominica,2
+1730_1734,edmonton,1
+1730_1734,florida,9
+1730_1734,gambia,10
+1730_1734,ganges,5
+1730_1734,granada,1
+1730_1734,grenada,11
+1730_1734,guiana,3
+1730_1734,halifax,2
+1730_1734,honduras,17
+1730_1734,houston,1
+1730_1734,idaho,2
+1730_1734,indiana,2
+1730_1734,kingston,7
+1730_1734,long island,3
+1730_1734,louisiana,5
+1730_1734,mackenzie,10
+1730_1734,maine,46
+1730_1734,maryland,11
+1730_1734,massachusetts,1
+1730_1734,miami,2
+1730_1734,mississippi,6
+1730_1734,mobile,6
+1730_1734,montana,1
+1730_1734,montreal,1
+1730_1734,nevada,1
+1730_1734,new brunswick,1
+1730_1734,new england,61
+1730_1734,new hampshire,1
+1730_1734,new haven,1
+1730_1734,new jersey,4
+1730_1734,new orleans,16
+1730_1734,new york,42
+1730_1734,newfoundland,13
+1730_1734,north carolina,15
+1730_1734,nova scotia,1
+1730_1734,philadelphia,40
+1730_1734,quebec,1
+1730_1734,raleigh,1
+1730_1734,regina,2
+1730_1734,rhode island,13
+1730_1734,silk,8
+1730_1734,south carolina,42
+1730_1734,st lucia,1
+1730_1734,sudbury,8
+1730_1734,surat,1
+1730_1734,texas,1
+1730_1734,tobago,2
+1730_1734,virginia,68
+1730_1734,whitehorse,1
+1735_1739,accra,1
+1735_1739,acton,1
+1735_1739,alabama,8
+1735_1739,alexandria,2
+1735_1739,ambala,1
+1735_1739,atlanta,1
+1735_1739,austin,9
+1735_1739,bahamas,1
+1735_1739,baltimore,1
+1735_1739,barbados,74
+1735_1739,baroda,1
+1735_1739,bengal,1
+1735_1739,boston,20
+1735_1739,carrier,1
+1735_1739,cayes,5
+1735_1739,charlotte,1
+1735_1739,cleveland,1
+1735_1739,dallas,13
+1735_1739,delaware,1
+1735_1739,delhi,2
+1735_1739,detroit,1
+1735_1739,dominica,1
+1735_1739,edmonton,2
+1735_1739,florida,6
+1735_1739,frankfort,7
+1735_1739,gambia,16
+1735_1739,ganges,13
+1735_1739,granada,2
+1735_1739,halifax,1
+1735_1739,hartford,1
+1735_1739,honduras,9
+1735_1739,idaho,1
+1735_1739,indore,2
+1735_1739,kingston,1
+1735_1739,long island,1
+1735_1739,maine,33
+1735_1739,maryland,17
+1735_1739,miami,3
+1735_1739,mobile,8
+1735_1739,montreal,2
+1735_1739,nevada,1
+1735_1739,new england,26
+1735_1739,new hampshire,1
+1735_1739,new jersey,6
+1735_1739,new york,11
+1735_1739,newfoundland,15
+1735_1739,niagara,1
+1735_1739,niger,10
+1735_1739,north carolina,2
+1735_1739,orissa,1
+1735_1739,philadelphia,33
+1735_1739,quebec,1
+1735_1739,rhode island,1
+1735_1739,silk,11
+1735_1739,south carolina,29
+1735_1739,st louis,3
+1735_1739,texas,1
+1735_1739,tobago,1
+1735_1739,vermont,4
+1735_1739,virginia,40
+1740_1744,ambala,1
+1740_1744,austin,1
+1740_1744,bahamas,5
+1740_1744,baltimore,2
+1740_1744,barbados,49
+1740_1744,belize,2
+1740_1744,boston,6
+1740_1744,calabar,1
+1740_1744,carrier,2
+1740_1744,cayes,2
+1740_1744,connecticut,3
+1740_1744,dallas,7
+1740_1744,delaware,3
+1740_1744,detroit,3
+1740_1744,dominica,3
+1740_1744,florida,9
+1740_1744,gambia,3
+1740_1744,ganges,4
+1740_1744,guiana,1
+1740_1744,halifax,1
+1740_1744,hartford,9
+1740_1744,honduras,7
+1740_1744,honolulu,1
+1740_1744,kingston,1
+1740_1744,maine,27
+1740_1744,manitoba,1
+1740_1744,maryland,14
+1740_1744,miami,1
+1740_1744,mobile,2
+1740_1744,montreal,1
+1740_1744,new brunswick,2
+1740_1744,new england,7
+1740_1744,new haven,1
+1740_1744,new jersey,5
+1740_1744,new york,28
+1740_1744,newfoundland,19
+1740_1744,niger,1
+1740_1744,ontario,1
+1740_1744,oregon,1
+1740_1744,pennsylvania,8
+1740_1744,philadelphia,15
+1740_1744,poona,1
+1740_1744,regina,2
+1740_1744,rhode island,1
+1740_1744,silk,5
+1740_1744,south carolina,43
+1740_1744,st lucia,1
+1740_1744,sudbury,1
+1740_1744,texas,2
+1740_1744,vermont,1
+1740_1744,virginia,45
+1745_1749,acadia,2
+1745_1749,ambala,1
+1745_1749,arizona,1
+1745_1749,austin,2
+1745_1749,baltimore,1
+1745_1749,barbados,24
+1745_1749,belize,2
+1745_1749,bengal,3
+1745_1749,bihar,1
+1745_1749,boston,15
+1745_1749,calabar,14
+1745_1749,calicut,1
+1745_1749,carrier,1
+1745_1749,cayes,1
+1745_1749,ceylon,3
+1745_1749,cleveland,1
+1745_1749,dallas,1
+1745_1749,daman,2
+1745_1749,delaware,2
+1745_1749,detroit,1
+1745_1749,florida,3
+1745_1749,gambia,6
+1745_1749,ganges,4
+1745_1749,hartford,1
+1745_1749,honduras,1
+1745_1749,hurling,1
+1745_1749,idaho,3
+1745_1749,illinois,1
+1745_1749,indore,1
+1745_1749,kaveri,1
+1745_1749,kingston,5
+1745_1749,maine,20
+1745_1749,maryland,7
+1745_1749,miami,4
+1745_1749,mobile,1
+1745_1749,new calabar,4
+1745_1749,new england,21
+1745_1749,new jersey,1
+1745_1749,new orleans,3
+1745_1749,new york,36
+1745_1749,newfoundland,5
+1745_1749,north carolina,5
+1745_1749,nova scotia,1
+1745_1749,oregon,1
+1745_1749,pennsylvania,2
+1745_1749,philadelphia,15
+1745_1749,quebec,2
+1745_1749,rhode island,1
+1745_1749,silk,11
+1745_1749,south carolina,4
+1745_1749,st lucia,4
+1745_1749,sudbury,2
+1745_1749,texas,2
+1745_1749,tobago,3
+1745_1749,topeka,1
+1745_1749,trinidad,3
+1745_1749,virginia,20
+1750_1754,austin,6
+1750_1754,baltimore,3
+1750_1754,barbados,18
+1750_1754,bengal,1
+1750_1754,boston,8
+1750_1754,calabar,2
+1750_1754,carrier,2
+1750_1754,cayes,4
+1750_1754,delaware,2
+1750_1754,dominica,3
+1750_1754,florida,4
+1750_1754,fort william,1
+1750_1754,gambia,7
+1750_1754,ganges,4
+1750_1754,granada,1
+1750_1754,halifax,10
+1750_1754,honduras,11
+1750_1754,kingston,10
+1750_1754,louisiana,1
+1750_1754,mackenzie,1
+1750_1754,maine,14
+1750_1754,maryland,17
+1750_1754,mobile,1
+1750_1754,navajo,1
+1750_1754,new brunswick,1
+1750_1754,new england,29
+1750_1754,new jersey,6
+1750_1754,new york,20
+1750_1754,newfoundland,3
+1750_1754,niagara,1
+1750_1754,north carolina,3
+1750_1754,nova scotia,19
+1750_1754,oregon,1
+1750_1754,ottawa,1
+1750_1754,philadelphia,16
+1750_1754,pondicherry,1
+1750_1754,quebec,2
+1750_1754,raleigh,3
+1750_1754,rhode island,6
+1750_1754,silk,2
+1750_1754,south carolina,13
+1750_1754,st louis,1
+1750_1754,st lucia,6
+1750_1754,sudbury,1
+1750_1754,tobago,3
+1750_1754,trinidad,1
+1750_1754,virginia,21
+1750_1754,yukon,1
+1755_1759,austin,1
+1755_1759,barbados,24
+1755_1759,bengal,1
+1755_1759,biloxi,1
+1755_1759,boise,1
+1755_1759,boston,8
+1755_1759,calabar,3
+1755_1759,carrier,1
+1755_1759,cayes,4
+1755_1759,cleveland,1
+1755_1759,connecticut,5
+1755_1759,delaware,1
+1755_1759,delhi,2
+1755_1759,detroit,2
+1755_1759,dominica,9
+1755_1759,florida,1
+1755_1759,fort william,5
+1755_1759,frankfort,2
+1755_1759,gambia,26
+1755_1759,ganges,3
+1755_1759,halifax,4
+1755_1759,hartford,1
+1755_1759,honduras,1
+1755_1759,houston,1
+1755_1759,idaho,5
+1755_1759,illinois,1
+1755_1759,kaveri,1
+1755_1759,kingston,5
+1755_1759,krishna,1
+1755_1759,louisiana,3
+1755_1759,mackenzie,1
+1755_1759,maine,34
+1755_1759,maryland,4
+1755_1759,mobile,7
+1755_1759,montreal,1
+1755_1759,new calabar,1
+1755_1759,new england,2
+1755_1759,new hampshire,1
+1755_1759,new jersey,1
+1755_1759,new orleans,1
+1755_1759,new york,12
+1755_1759,newfoundland,3
+1755_1759,niagara,1
+1755_1759,niger,8
+1755_1759,north carolina,1
+1755_1759,nova scotia,1
+1755_1759,ontario,1
+1755_1759,pennsylvania,1
+1755_1759,philadelphia,17
+1755_1759,quebec,7
+1755_1759,seattle,1
+1755_1759,silk,7
+1755_1759,south carolina,15
+1755_1759,st louis,1
+1755_1759,st lucia,1
+1755_1759,tobago,2
+1755_1759,toronto,1
+1755_1759,trinidad,1
+1755_1759,tucson,1
+1755_1759,virginia,17
+1760_1764,acadia,2
+1760_1764,accra,2
+1760_1764,alberta,1
+1760_1764,alexandria,2
+1760_1764,ambala,3
+1760_1764,arizona,3
+1760_1764,atlanta,1
+1760_1764,austin,1
+1760_1764,baltimore,2
+1760_1764,barbados,72
+1760_1764,belize,1
+1760_1764,bengal,8
+1760_1764,boston,16
+1760_1764,calabar,3
+1760_1764,calcutta,1
+1760_1764,calgary,1
+1760_1764,california,1
+1760_1764,carrier,2
+1760_1764,cayes,4
+1760_1764,charlotte,14
+1760_1764,cleveland,2
+1760_1764,connecticut,3
+1760_1764,delaware,5
+1760_1764,delhi,2
+1760_1764,denver,2
+1760_1764,detroit,6
+1760_1764,dominica,8
+1760_1764,florida,20
+1760_1764,fort detroit,2
+1760_1764,fort william,1
+1760_1764,frankfort,3
+1760_1764,gambia,22
+1760_1764,ganges,10
+1760_1764,granada,1
+1760_1764,grenada,4
+1760_1764,guiana,2
+1760_1764,halifax,12
+1760_1764,hartford,2
+1760_1764,honduras,15
+1760_1764,idaho,5
+1760_1764,illinois,3
+1760_1764,indiana,3
+1760_1764,indore,1
+1760_1764,jaipur,1
+1760_1764,kingston,18
+1760_1764,labrador,2
+1760_1764,long island,3
+1760_1764,louisiana,12
+1760_1764,madras,2
+1760_1764,madurai,1
+1760_1764,maine,48
+1760_1764,maryland,18
+1760_1764,miami,8
+1760_1764,mobile,7
+1760_1764,montreal,6
+1760_1764,nevada,1
+1760_1764,new calabar,1
+1760_1764,new england,18
+1760_1764,new mexico,1
+1760_1764,new orleans,9
+1760_1764,new york,36
+1760_1764,newfoundland,22
+1760_1764,niagara,9
+1760_1764,niger,5
+1760_1764,north carolina,5
+1760_1764,nova scotia,4
+1760_1764,ontario,4
+1760_1764,oregon,3
+1760_1764,orissa,1
+1760_1764,paiute,2
+1760_1764,pennsylvania,3
+1760_1764,pensacola,5
+1760_1764,philadelphia,17
+1760_1764,pondicherry,5
+1760_1764,quebec,21
+1760_1764,rhode island,2
+1760_1764,roanoke,1
+1760_1764,silk,8
+1760_1764,south carolina,30
+1760_1764,st louis,1
+1760_1764,st lucia,6
+1760_1764,tobago,8
+1760_1764,trinidad,4
+1760_1764,vermont,1
+1760_1764,virginia,35
+1760_1764,yazoo,1
+1765_1769,accra,1
+1765_1769,alexandria,3
+1765_1769,ambala,2
+1765_1769,assam,1
+1765_1769,atlanta,2
+1765_1769,austin,1
+1765_1769,bahamas,2
+1765_1769,barbados,22
+1765_1769,belize,3
+1765_1769,bengal,5
+1765_1769,boston,18
+1765_1769,calabar,10
+1765_1769,calgary,2
+1765_1769,carrier,4
+1765_1769,cayes,7
+1765_1769,charlotte,6
+1765_1769,cleveland,2
+1765_1769,colombo,1
+1765_1769,connecticut,8
+1765_1769,dallas,2
+1765_1769,daman,2
+1765_1769,delaware,1
+1765_1769,delhi,5
+1765_1769,denver,1
+1765_1769,detroit,2
+1765_1769,dominica,16
+1765_1769,florida,36
+1765_1769,gambia,16
+1765_1769,ganges,6
+1765_1769,granada,10
+1765_1769,grenada,15
+1765_1769,guiana,2
+1765_1769,halifax,8
+1765_1769,hartford,1
+1765_1769,honduras,58
+1765_1769,houston,1
+1765_1769,hurling,1
+1765_1769,idaho,5
+1765_1769,illinois,3
+1765_1769,indore,1
+1765_1769,johore,2
+1765_1769,kingston,22
+1765_1769,labrador,1
+1765_1769,louisiana,2
+1765_1769,madura,1
+1765_1769,maine,46
+1765_1769,maryland,19
+1765_1769,miami,4
+1765_1769,mobile,9
+1765_1769,montreal,5
+1765_1769,nagpur,1
+1765_1769,new calabar,4
+1765_1769,new england,17
+1765_1769,new hampshire,1
+1765_1769,new jersey,5
+1765_1769,new orleans,15
+1765_1769,new york,31
+1765_1769,newfoundland,19
+1765_1769,niagara,2
+1765_1769,niger,2
+1765_1769,north carolina,17
+1765_1769,nova scotia,6
+1765_1769,ontario,1
+1765_1769,oregon,1
+1765_1769,pennsylvania,2
+1765_1769,pensacola,21
+1765_1769,philadelphia,24
+1765_1769,pondicherry,2
+1765_1769,quebec,14
+1765_1769,regina,3
+1765_1769,rhode island,9
+1765_1769,seattle,1
+1765_1769,silk,5
+1765_1769,south carolina,34
+1765_1769,st louis,4
+1765_1769,st lucia,11
+1765_1769,surat,2
+1765_1769,texas,2
+1765_1769,tobago,14
+1765_1769,toronto,1
+1765_1769,trinidad,6
+1765_1769,vermont,2
+1765_1769,virginia,42
+1770_1774,abuja,1
+1770_1774,acton,2
+1770_1774,alberta,2
+1770_1774,alexandria,2
+1770_1774,ambala,1
+1770_1774,atlanta,1
+1770_1774,austin,2
+1770_1774,bahamas,1
+1770_1774,baltimore,8
+1770_1774,barbados,30
+1770_1774,baroda,1
+1770_1774,belize,2
+1770_1774,bengal,14
+1770_1774,bihar,1
+1770_1774,boston,31
+1770_1774,calabar,1
+1770_1774,calcutta,6
+1770_1774,california,2
+1770_1774,camden,1
+1770_1774,carrier,1
+1770_1774,cayes,7
+1770_1774,ceylon,1
+1770_1774,charlotte,11
+1770_1774,chicago,1
+1770_1774,cleveland,1
+1770_1774,connecticut,1
+1770_1774,dallas,3
+1770_1774,daman,1
+1770_1774,delhi,3
+1770_1774,dominica,60
+1770_1774,edmonton,3
+1770_1774,florida,17
+1770_1774,frankfort,1
+1770_1774,gambia,8
+1770_1774,ganges,46
+1770_1774,granada,10
+1770_1774,grenada,31
+1770_1774,guiana,2
+1770_1774,halifax,5
+1770_1774,hartford,1
+1770_1774,honduras,55
+1770_1774,hubli,2
+1770_1774,hurling,1
+1770_1774,idaho,4
+1770_1774,imphal,1
+1770_1774,indiana,7
+1770_1774,indore,2
+1770_1774,jaipur,1
+1770_1774,johore,1
+1770_1774,kansas,1
+1770_1774,kingston,13
+1770_1774,little rock,2
+1770_1774,long island,1
+1770_1774,louisiana,3
+1770_1774,mackenzie,8
+1770_1774,madras,3
+1770_1774,madura,1
+1770_1774,maine,78
+1770_1774,manipur,1
+1770_1774,maryland,24
+1770_1774,miami,6
+1770_1774,mobile,7
+1770_1774,montreal,1
+1770_1774,nashville,1
+1770_1774,new england,12
+1770_1774,new jersey,1
+1770_1774,new orleans,3
+1770_1774,new york,29
+1770_1774,newfoundland,3
+1770_1774,north carolina,11
+1770_1774,nova scotia,2
+1770_1774,oregon,1
+1770_1774,orissa,1
+1770_1774,paiute,2
+1770_1774,penang,1
+1770_1774,pennsylvania,1
+1770_1774,pensacola,3
+1770_1774,philadelphia,29
+1770_1774,quebec,8
+1770_1774,regina,2
+1770_1774,rhode island,2
+1770_1774,roanoke,1
+1770_1774,seattle,1
+1770_1774,silk,11
+1770_1774,south carolina,25
+1770_1774,st louis,1
+1770_1774,st lucia,6
+1770_1774,surat,4
+1770_1774,taiping,1
+1770_1774,texas,2
+1770_1774,tobago,33
+1770_1774,trinidad,2
+1770_1774,varanasi,1
+1770_1774,vermont,2
+1770_1774,virginia,45
+1770_1774,whitehorse,1
+1770_1774,wisconsin,1
+1775_1779,ajmer,1
+1775_1779,alaska,1
+1775_1779,alberta,1
+1775_1779,alexandria,1
+1775_1779,ambala,2
+1775_1779,atlanta,1
+1775_1779,austin,5
+1775_1779,bahamas,6
+1775_1779,baltimore,5
+1775_1779,barbados,54
+1775_1779,bengal,6
+1775_1779,boise,3
+1775_1779,boston,44
+1775_1779,calcutta,1
+1775_1779,calgary,2
+1775_1779,calicut,3
+1775_1779,camden,5
+1775_1779,carrier,4
+1775_1779,cascades,1
+1775_1779,cayes,7
+1775_1779,charlotte,9
+1775_1779,chicago,1
+1775_1779,connecticut,6
+1775_1779,dallas,5
+1775_1779,deccan,1
+1775_1779,delaware,7
+1775_1779,delhi,6
+1775_1779,detroit,1
+1775_1779,dominica,62
+1775_1779,florida,32
+1775_1779,fort william,1
+1775_1779,gambia,14
+1775_1779,ganges,43
+1775_1779,granada,24
+1775_1779,grenada,135
+1775_1779,halifax,18
+1775_1779,hartford,7
+1775_1779,honduras,14
+1775_1779,houston,4
+1775_1779,hurling,2
+1775_1779,idaho,6
+1775_1779,illinois,1
+1775_1779,indiana,1
+1775_1779,indore,1
+1775_1779,kingston,28
+1775_1779,labrador,2
+1775_1779,little rock,1
+1775_1779,long island,1
+1775_1779,mackenzie,2
+1775_1779,madras,3
+1775_1779,maine,56
+1775_1779,malacca,1
+1775_1779,maryland,21
+1775_1779,miami,11
+1775_1779,milwaukee,1
+1775_1779,missouri,1
+1775_1779,mobile,11
+1775_1779,montreal,8
+1775_1779,mysore,1
+1775_1779,new england,18
+1775_1779,new hampshire,2
+1775_1779,new haven,1
+1775_1779,new jersey,1
+1775_1779,new orleans,21
+1775_1779,new york,54
+1775_1779,newfoundland,17
+1775_1779,niger,5
+1775_1779,north carolina,31
+1775_1779,nova scotia,2
+1775_1779,paiute,1
+1775_1779,pennsylvania,13
+1775_1779,pensacola,12
+1775_1779,philadelphia,44
+1775_1779,pondicherry,2
+1775_1779,quebec,29
+1775_1779,raleigh,1
+1775_1779,regina,2
+1775_1779,rhode island,3
+1775_1779,roanoke,1
+1775_1779,sarawak,1
+1775_1779,seattle,3
+1775_1779,sierra leone,1
+1775_1779,silk,10
+1775_1779,south carolina,55
+1775_1779,srinagar,1
+1775_1779,st lucia,11
+1775_1779,sudbury,4
+1775_1779,surat,1
+1775_1779,texas,3
+1775_1779,tobago,21
+1775_1779,trinidad,5
+1775_1779,tucson,2
+1775_1779,vancouver,1
+1775_1779,vermont,1
+1775_1779,virginia,142
+1775_1779,whitehorse,1
+1780_1784,acadia,1
+1780_1784,acton,1
+1780_1784,alberta,4
+1780_1784,alexandria,16
+1780_1784,ambala,2
+1780_1784,atlanta,1
+1780_1784,austin,1
+1780_1784,bahamas,5
+1780_1784,baltimore,5
+1780_1784,barbados,48
+1780_1784,baton rouge,4
+1780_1784,belize,3
+1780_1784,bengal,2
+1780_1784,bhopal,1
+1780_1784,bihar,3
+1780_1784,boise,1
+1780_1784,boston,15
+1780_1784,calabar,6
+1780_1784,calgary,2
+1780_1784,calicut,1
+1780_1784,california,1
+1780_1784,camden,14
+1780_1784,carrier,7
+1780_1784,cayes,6
+1780_1784,charlotte,13
+1780_1784,connecticut,4
+1780_1784,dallas,10
+1780_1784,daman,3
+1780_1784,delaware,6
+1780_1784,delhi,10
+1780_1784,detroit,2
+1780_1784,dominica,8
+1780_1784,florida,48
+1780_1784,fort william,1
+1780_1784,frankfort,1
+1780_1784,gambia,10
+1780_1784,ganges,18
+1780_1784,granada,4
+1780_1784,grenada,35
+1780_1784,guiana,3
+1780_1784,halifax,20
+1780_1784,honduras,6
+1780_1784,idaho,2
+1780_1784,illinois,4
+1780_1784,kingston,44
+1780_1784,labrador,2
+1780_1784,louisiana,8
+1780_1784,madras,13
+1780_1784,maine,111
+1780_1784,malabar coast,1
+1780_1784,maryland,30
+1780_1784,miami,9
+1780_1784,mobile,22
+1780_1784,mojave,1
+1780_1784,montana,1
+1780_1784,new brunswick,3
+1780_1784,new england,5
+1780_1784,new hampshire,2
+1780_1784,new haven,1
+1780_1784,new jersey,16
+1780_1784,new orleans,13
+1780_1784,new york,84
+1780_1784,newfoundland,10
+1780_1784,niger,4
+1780_1784,north carolina,11
+1780_1784,nova scotia,13
+1780_1784,ontario,3
+1780_1784,orissa,2
+1780_1784,pennsylvania,22
+1780_1784,pensacola,20
+1780_1784,philadelphia,49
+1780_1784,pondicherry,6
+1780_1784,quebec,3
+1780_1784,regina,1
+1780_1784,rhode island,5
+1780_1784,roanoke,1
+1780_1784,silk,10
+1780_1784,south carolina,56
+1780_1784,st louis,2
+1780_1784,st lucia,36
+1780_1784,sudbury,1
+1780_1784,surat,1
+1780_1784,texas,3
+1780_1784,tobago,16
+1780_1784,topeka,1
+1780_1784,toronto,1
+1780_1784,trinidad,3
+1780_1784,united states of america,12
+1780_1784,vermont,2
+1780_1784,virginia,85
+1780_1784,west florida,1
+1780_1784,whitehorse,1
+1780_1784,yukon,1
+1785_1789,acadia,1
+1785_1789,accra,2
+1785_1789,acton,1
+1785_1789,alaska,1
+1785_1789,alberta,2
+1785_1789,alexandria,33
+1785_1789,arizona,1
+1785_1789,atlanta,2
+1785_1789,austin,4
+1785_1789,bahamas,10
+1785_1789,baltimore,7
+1785_1789,barbados,57
+1785_1789,belize,6
+1785_1789,bengal,8
+1785_1789,bihar,1
+1785_1789,boise,1
+1785_1789,boston,9
+1785_1789,calabar,2
+1785_1789,calcutta,1
+1785_1789,calgary,2
+1785_1789,camden,6
+1785_1789,carrier,3
+1785_1789,cascades,3
+1785_1789,cayes,13
+1785_1789,ceylon,2
+1785_1789,charlotte,15
+1785_1789,colombo,1
+1785_1789,connecticut,9
+1785_1789,coorg,1
+1785_1789,dallas,10
+1785_1789,delaware,8
+1785_1789,delhi,6
+1785_1789,denver,1
+1785_1789,detroit,9
+1785_1789,dominica,52
+1785_1789,edmonton,2
+1785_1789,florida,13
+1785_1789,frankfort,2
+1785_1789,gambia,15
+1785_1789,ganges,34
+1785_1789,granada,1
+1785_1789,grenada,65
+1785_1789,guiana,2
+1785_1789,halifax,19
+1785_1789,honduras,24
+1785_1789,houston,1
+1785_1789,hubli,1
+1785_1789,hurling,1
+1785_1789,idaho,6
+1785_1789,illinois,1
+1785_1789,indiana,6
+1785_1789,indore,1
+1785_1789,jaipur,1
+1785_1789,kentucky,1
+1785_1789,kingston,43
+1785_1789,long island,1
+1785_1789,louisiana,1
+1785_1789,mackenzie,2
+1785_1789,madras,5
+1785_1789,maine,91
+1785_1789,manipur,2
+1785_1789,maryland,24
+1785_1789,miami,9
+1785_1789,mobile,5
+1785_1789,montana,2
+1785_1789,nagpur,1
+1785_1789,new england,9
+1785_1789,new hampshire,1
+1785_1789,new jersey,4
+1785_1789,new orleans,5
+1785_1789,new york,41
+1785_1789,newfoundland,6
+1785_1789,niagara,1
+1785_1789,niger,14
+1785_1789,north carolina,8
+1785_1789,nova scotia,11
+1785_1789,ontario,1
+1785_1789,oregon,6
+1785_1789,pennsylvania,20
+1785_1789,philadelphia,49
+1785_1789,pondicherry,2
+1785_1789,quebec,4
+1785_1789,raleigh,2
+1785_1789,regina,3
+1785_1789,rhode island,1
+1785_1789,roanoke,1
+1785_1789,saint lucia,1
+1785_1789,seattle,3
+1785_1789,sierra leone,3
+1785_1789,silk,8
+1785_1789,south carolina,15
+1785_1789,st louis,1
+1785_1789,st lucia,10
+1785_1789,tanjore,2
+1785_1789,texas,5
+1785_1789,tobago,2
+1785_1789,topeka,3
+1785_1789,toronto,1
+1785_1789,trinidad,11
+1785_1789,united states of america,8
+1785_1789,vermont,6
+1785_1789,virginia,58
+1785_1789,west florida,1
+1785_1789,whitehorse,1
+1785_1789,wyoming,1
+1790_1794,accra,4
+1790_1794,acton,7
+1790_1794,alaska,1
+1790_1794,alberta,8
+1790_1794,alexandria,38
+1790_1794,ambala,2
+1790_1794,arizona,2
+1790_1794,atlanta,4
+1790_1794,austin,7
+1790_1794,bahamas,20
+1790_1794,baltimore,14
+1790_1794,barbados,61
+1790_1794,belize,1
+1790_1794,bengal,10
+1790_1794,bihar,2
+1790_1794,biloxi,1
+1790_1794,boise,3
+1790_1794,boston,7
+1790_1794,brazos,1
+1790_1794,cahokia,1
+1790_1794,calabar,15
+1790_1794,calgary,1
+1790_1794,calicut,1
+1790_1794,camden,2
+1790_1794,carrier,9
+1790_1794,cayes,33
+1790_1794,ceylon,1
+1790_1794,charlotte,10
+1790_1794,chennai,1
+1790_1794,connecticut,6
+1790_1794,dallas,5
+1790_1794,daman,2
+1790_1794,delaware,7
+1790_1794,delhi,16
+1790_1794,denver,1
+1790_1794,detroit,7
+1790_1794,dominica,77
+1790_1794,florida,8
+1790_1794,frankfort,3
+1790_1794,gambia,14
+1790_1794,ganges,28
+1790_1794,granada,1
+1790_1794,grenada,93
+1790_1794,guiana,1
+1790_1794,halifax,29
+1790_1794,hartford,2
+1790_1794,honduras,31
+1790_1794,houston,1
+1790_1794,hubli,3
+1790_1794,hurling,4
+1790_1794,idaho,3
+1790_1794,illinois,2
+1790_1794,indiana,14
+1790_1794,indore,3
+1790_1794,johore,1
+1790_1794,kansas,1
+1790_1794,kentucky,8
+1790_1794,kingston,47
+1790_1794,knoxville,2
+1790_1794,long island,2
+1790_1794,mackenzie,1
+1790_1794,madras,7
+1790_1794,maine,143
+1790_1794,maryland,13
+1790_1794,massachusetts,1
+1790_1794,miami,13
+1790_1794,mississippi,2
+1790_1794,mobile,12
+1790_1794,montana,3
+1790_1794,nevada,1
+1790_1794,new england,10
+1790_1794,new hampshire,3
+1790_1794,new jersey,8
+1790_1794,new orleans,4
+1790_1794,new york,47
+1790_1794,newfoundland,22
+1790_1794,niagara,2
+1790_1794,niger,34
+1790_1794,north carolina,13
+1790_1794,nova scotia,12
+1790_1794,ontario,1
+1790_1794,oregon,3
+1790_1794,paiute,1
+1790_1794,pennsylvania,17
+1790_1794,pensacola,2
+1790_1794,philadelphia,28
+1790_1794,pondicherry,1
+1790_1794,quebec,8
+1790_1794,raleigh,1
+1790_1794,regina,9
+1790_1794,rhode island,5
+1790_1794,seattle,5
+1790_1794,sierra leone,14
+1790_1794,silk,8
+1790_1794,south carolina,23
+1790_1794,st louis,11
+1790_1794,st lucia,19
+1790_1794,sudbury,2
+1790_1794,texas,9
+1790_1794,tobago,27
+1790_1794,topeka,1
+1790_1794,toronto,1
+1790_1794,trinidad,10
+1790_1794,truckee,1
+1790_1794,united states of america,13
+1790_1794,vermont,9
+1790_1794,virginia,33
+1795_1799,acadia,1
+1795_1799,accra,2
+1795_1799,acton,3
+1795_1799,alabama,1
+1795_1799,alaska,2
+1795_1799,alberta,1
+1795_1799,alexandria,4
+1795_1799,arizona,3
+1795_1799,assam,1
+1795_1799,atlanta,2
+1795_1799,austin,8
+1795_1799,bahamas,2
+1795_1799,baltimore,14
+1795_1799,barbados,101
+1795_1799,belize,7
+1795_1799,bengal,18
+1795_1799,benue,1
+1795_1799,bihar,4
+1795_1799,biloxi,1
+1795_1799,boise,2
+1795_1799,boston,18
+1795_1799,calcutta,3
+1795_1799,calgary,1
+1795_1799,camden,2
+1795_1799,carrier,7
+1795_1799,cayes,41
+1795_1799,ceylon,11
+1795_1799,charlotte,1
+1795_1799,chennai,1
+1795_1799,cleveland,1
+1795_1799,colombo,1
+1795_1799,connecticut,1
+1795_1799,coorg,1
+1795_1799,dallas,3
+1795_1799,daman,8
+1795_1799,delaware,3
+1795_1799,delhi,8
+1795_1799,denver,3
+1795_1799,detroit,4
+1795_1799,dominica,42
+1795_1799,florida,4
+1795_1799,frankfort,2
+1795_1799,gambia,20
+1795_1799,ganges,30
+1795_1799,granada,3
+1795_1799,grenada,200
+1795_1799,guiana,20
+1795_1799,halifax,15
+1795_1799,hartford,1
+1795_1799,honduras,24
+1795_1799,houston,8
+1795_1799,hubli,2
+1795_1799,hurling,6
+1795_1799,hyderabad,1
+1795_1799,idaho,5
+1795_1799,illinois,6
+1795_1799,indiana,5
+1795_1799,indore,2
+1795_1799,jaipur,1
+1795_1799,kandy,1
+1795_1799,kansas,3
+1795_1799,kaveri,1
+1795_1799,kentucky,2
+1795_1799,kingston,58
+1795_1799,knoxville,1
+1795_1799,labrador,2
+1795_1799,lansing,1
+1795_1799,louisiana,2
+1795_1799,louisville,1
+1795_1799,mackenzie,8
+1795_1799,madras,6
+1795_1799,maine,154
+1795_1799,malacca,1
+1795_1799,manipur,1
+1795_1799,maryland,1
+1795_1799,massachusetts,1
+1795_1799,miami,16
+1795_1799,michigan,1
+1795_1799,mississippi,1
+1795_1799,mobile,16
+1795_1799,mojave,1
+1795_1799,montana,9
+1795_1799,montreal,6
+1795_1799,nevada,2
+1795_1799,new england,2
+1795_1799,new orleans,1
+1795_1799,new york,27
+1795_1799,newfoundland,11
+1795_1799,niagara,2
+1795_1799,niger,54
+1795_1799,nova scotia,11
+1795_1799,ontario,1
+1795_1799,oregon,4
+1795_1799,orissa,2
+1795_1799,ottawa,2
+1795_1799,paiute,1
+1795_1799,pennsylvania,13
+1795_1799,pensacola,1
+1795_1799,philadelphia,29
+1795_1799,pondicherry,1
+1795_1799,poona,1
+1795_1799,quebec,12
+1795_1799,raleigh,1
+1795_1799,regina,5
+1795_1799,saint lucia,2
+1795_1799,seattle,4
+1795_1799,shillong,1
+1795_1799,sierra leone,30
+1795_1799,silk,19
+1795_1799,south carolina,10
+1795_1799,st lucia,113
+1795_1799,sudbury,1
+1795_1799,taiping,1
+1795_1799,tanjore,1
+1795_1799,tennessee,1
+1795_1799,texas,7
+1795_1799,tobago,34
+1795_1799,toronto,2
+1795_1799,trincomalee,5
+1795_1799,trinidad,44
+1795_1799,united states of america,4
+1795_1799,vermont,4
+1795_1799,virginia,13
+1795_1799,west florida,1
+1795_1799,yukon,1
+1800_1804,alberta,1
+1800_1804,alexandria,5
+1800_1804,arizona,1
+1800_1804,atlanta,1
+1800_1804,austin,1
+1800_1804,bahamas,2
+1800_1804,baltimore,5
+1800_1804,barbados,9
+1800_1804,belize,1
+1800_1804,bengal,5
+1800_1804,boston,3
+1800_1804,calcutta,1
+1800_1804,carrier,1
+1800_1804,cayes,10
+1800_1804,ceylon,2
+1800_1804,charlotte,31
+1800_1804,dallas,1
+1800_1804,daman,2
+1800_1804,delhi,4
+1800_1804,denver,1
+1800_1804,fort william,1
+1800_1804,frankfort,1
+1800_1804,ganges,1
+1800_1804,grenada,1
+1800_1804,guiana,2
+1800_1804,halifax,1
+1800_1804,honolulu,1
+1800_1804,idaho,2
+1800_1804,illinois,2
+1800_1804,imphal,1
+1800_1804,kansas,1
+1800_1804,kingston,17
+1800_1804,knoxville,1
+1800_1804,louisiana,1
+1800_1804,madras,13
+1800_1804,maine,34
+1800_1804,mathura,1
+1800_1804,miami,5
+1800_1804,missouri,1
+1800_1804,mobile,3
+1800_1804,montana,1
+1800_1804,new brunswick,1
+1800_1804,new england,1
+1800_1804,new orleans,1
+1800_1804,new york,13
+1800_1804,newfoundland,1
+1800_1804,niagara,1
+1800_1804,niger,5
+1800_1804,north carolina,9
+1800_1804,ontario,1
+1800_1804,ottawa,1
+1800_1804,philadelphia,11
+1800_1804,quebec,2
+1800_1804,regina,1
+1800_1804,silk,2
+1800_1804,south carolina,4
+1800_1804,surat,1
+1800_1804,texas,1
+1800_1804,trinidad,8
+1800_1804,united states of america,1
+1800_1804,vermont,1
+1800_1804,virginia,45
+1800_1804,wisconsin,1
