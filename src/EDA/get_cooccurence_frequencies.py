@@ -221,6 +221,6 @@ def convert_cooccurrence(coocurrence,exclude_countries=True):
 
 if __name__=="__main__":
 
-    #generate_cooccurence_csv(DATA_FOLDER / "detect_words.jsonl")
+    generate_cooccurence_csv(DATA_FOLDER / "detect_words.jsonl")
     convert_cooccurrence(coocurrence="goodloc")
     convert_cooccurrence(coocurrence="peopleloc")
