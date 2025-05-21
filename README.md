@@ -63,3 +63,7 @@ We then Named Entity Recognition (NER) to extract mentions of historically signi
 ```sh
 python -m src.preprocessing.ner
 ```
+
+## Advertisement
+
+## Geography
