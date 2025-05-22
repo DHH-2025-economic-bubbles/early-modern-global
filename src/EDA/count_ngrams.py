@@ -77,7 +77,8 @@ if __name__=="__main__":
     article_types = ['Classified ads', 'Advertisement']
     n_gram_window = 3
 
-    output_dir = DATA_FOLDER/"decade_csvs_sugar"
+    output_folder = "decade_csvs_"+search_term
+    output_dir = DATA_FOLDER/output_folder
     os.makedirs(output_dir, exist_ok=True)
 
     for decade in range(1700, 1800, 10):
