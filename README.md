@@ -86,6 +86,14 @@ Ashworth, W. "Customs and Excise: Trade, Production and Consumption in England 1
 
 Rive, A. "The Consumption of Tobacco Since 1600", The Economic Journal, Volume 36, Issue Supplement_1, 1 January 1926, Pages 57–75, https://doi.org/10.1093/ej/36.Supplement_1.57
 
+Austen, R. A., & Smith, W. D. (2006). The Economic Value of British Colonial Empire in the Seventeenth and Eighteenth Centuries: The Economic Value of British Colonial Empire. History Compass, 4(1), 54–76. https://doi.org/10.1111/j.1478-0542.2005.00300.x
+
+Berg, M. (2004). In Pursuit of Luxury: Global History and British Consumer Goods in the Eighteenth Century. Past & Present, 182(1), 85–142. https://doi.org/10.1093/past/182.1.85
+
+Greaves, I. (1954). The Character of British Colonial Trade. Journal of Political Economy, 62(1), 1–11. https://doi.org/10.1086/257456
+
+McCants, A. E. C. (2007). Exotic Goods, Popular Consumption, and the Standard of Living: Thinking about Globalization in the Early Modern World. Journal of World History, 18(4), 433–462. https://doi.org/10.1353/jwh.2008.0008
+
 
 ## Geography: How is a colonial geography being created? How is the world being organised through a colonial lens?
 ### Article Extraction Based on Keywords
