@@ -1,4 +1,5 @@
-# early-modern-global
+# How are colonial systems represented in Early Modern Newspaper discourses? A study of newspaper representations of geographical places, people, and trade goods
+
 Repository for the Helsinki Digital Humanities hackathon 2025. Please follow the instructions to reproduce our research results.
 
 **All code should be ran from project root!**
@@ -65,7 +66,7 @@ We then Named Entity Recognition (NER) to extract mentions of historically signi
 python -m src.preprocessing.ner
 ```
 
-## Advertisement
+## Advertisements: How do advertisements of colonial goods reveal the historical contexts of slave trading and and Britain's attitudes toward its colonies?
 ### Extracting N-grams Related to Colonial Goods
 To analyze the discourse surrounding colonial goods, we extracted tri-grams containing these terms from newspaper advertisements.
 ```sh
@@ -78,7 +79,7 @@ To further examine the context in which colonial goods appeared, we identified a
 python -m src.EDA.generate_advertisement_noun_adj_list
 ```
 
-## Geography
+## Geography: How is a colonial geography being created? How is the world being organised through a colonial lens?
 ### Article Extraction Based on Keywords
 Using pre-defined lists of goods and locations associated with colonial trade, we extract articles that contain at least one keyword. These articles are saved along with their metadata
 ```sh
