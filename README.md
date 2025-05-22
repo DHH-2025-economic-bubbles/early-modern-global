@@ -73,7 +73,7 @@ To analyze the discourse surrounding colonial goods, we extracted tri-grams cont
 python -m src.EDA.count_ngrams
 ```
 
-### Categorizing Surrending Words
+### Categorizing Surrounding Words
 To further examine the context in which colonial goods appeared, we identified and extracted associated nouns and adjectives from the tri-grams.
 ```sh
 python -m src.EDA.generate_advertisement_noun_adj_list
