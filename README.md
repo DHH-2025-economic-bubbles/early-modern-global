@@ -93,3 +93,4 @@ python -m src.EDA.get_cooccurence_frequencies
 ```
 
 ### Use Co-occurence Data to Generate Geographic Maps
+We downloaded the DK Atlas of World History Gazetteer from the World Historical Gazetteers website. From this, we generated a geodataset (gpkg file) of locations pertaining to the British colonies in the early modern period. Using QGIS, we combined the CSV containing co-occurrence frequencies with this geodataset and represented these on a map. We did this for location co-occurrences with sugar and tobacco separately.
