@@ -1,5 +1,5 @@
 # early-modern-global
-Repository for the Helsinki Digital Humanities hackathon 2025.
+Repository for the Helsinki Digital Humanities hackathon 2025. Please follow the instructions to reproduce our research results.
 
 **All code should be ran from project root!**
 
@@ -66,6 +66,17 @@ python -m src.preprocessing.ner
 ```
 
 ## Advertisement
+### Extracting N-grams Related to Colonial Goods
+To analyze the discourse surrounding colonial goods, we extracted tri-grams containing these terms from newspaper advertisements.
+```sh
+python -m src.EDA.count_ngrams
+```
+
+### Categorizing Surrending Words
+To further examine the context in which colonial goods appeared, we identified and extracted associated nouns and adjectives from the tri-grams.
+```sh
+python -m src.EDA.generate_advertisement_noun_adj_list
+```
 
 ## Geography
 ### Article Extraction Based on Keywords
