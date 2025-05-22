@@ -94,3 +94,10 @@ python -m src.EDA.get_cooccurence_frequencies
 
 ### Use Co-occurence Data to Generate Geographic Maps
 We downloaded the DK Atlas of World History Gazetteer from the World Historical Gazetteers website. From this, we generated a geodataset (gpkg file) of locations pertaining to the British colonies in the early modern period. Using QGIS, we combined the CSV containing co-occurrence frequencies with this geodataset and represented these on a map. We did this for location co-occurrences with sugar and tobacco separately.
+
+### Secondary Literature
+Ardanuy, Mariona Coll, et al. “Resolving Places, Past and Present: Toponym Resolution in Historical British Newspapers Using Multiple Resources.” *Proceedings of the 13th Workshop on Geographic Information Retrieval*, Association for Computing Machinery, 2019, https://doi.org/10.1145/3371140.3371143.
+
+Menzin, Marion. “The Sugar Revolution in New England: Barbados, Massachusetts Bay, and the Atlantic Sugar Economy, 1600–1700.” *Business History Review*, 2024/03/21 ed., vol. 97, no. 4, 2023, pp. 699–750. Cambridge Core, *Cambridge University Press*, https://doi.org/10.1017/S0007680523000867.
+
+Merritt, J. E. “The Triangular Trade.” *Business History*, vol. 3, no. 1, Dec. 1960, pp. 1–7, https://doi.org/10.1080/00076796000000012.
