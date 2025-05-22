@@ -94,6 +94,7 @@ Greaves, I. (1954). The Character of British Colonial Trade. Journal of Politica
 
 McCants, A. E. C. (2007). Exotic Goods, Popular Consumption, and the Standard of Living: Thinking about Globalization in the Early Modern World. Journal of World History, 18(4), 433–462. https://doi.org/10.1353/jwh.2008.0008
 
+Richardson, D. (1987). The slave trade, sugar, and British economic growth, 1748-1776. The Journal of Interdisciplinary History, 17(4), 739-769.
 
 ## Geography: How is a colonial geography being created? How is the world being organised through a colonial lens?
 ### Article Extraction Based on Keywords
