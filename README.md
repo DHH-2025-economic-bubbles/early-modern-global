@@ -81,8 +81,11 @@ python -m src.EDA.generate_advertisement_noun_adj_list
 
 ### Secondary Literature
 Greaves, I. "The Character of British Colonial Trade. Journal of Political Economy", 1954, 62 (1), pp. 1-11, Stable URL: https://www.jstor.org/stable/1824983. 
+
 Ashworth, W. "Customs and Excise: Trade, Production and Consumption in England 1640– 1845", Oxford: Oxford University Press, 2003.
+
 Rive, A. "The Consumption of Tobacco Since 1600", The Economic Journal, Volume 36, Issue Supplement_1, 1 January 1926, Pages 57–75, https://doi.org/10.1093/ej/36.Supplement_1.57
+
 
 ## Geography: How is a colonial geography being created? How is the world being organised through a colonial lens?
 ### Article Extraction Based on Keywords
