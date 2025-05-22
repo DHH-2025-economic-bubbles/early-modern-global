@@ -10,6 +10,7 @@ From the project root, run the following command to download data files. For exa
 bash scripts/get_data.sh bl_newspapers_meta.csv json_res.tar
 ```
 
+These are the two files that are necessary for this study. If you are interested, there are also some other metadata available.
 ### Available file names:
 - `bl_newspapers_meta.csv`: Metadata for Burney and Nichols collections.
 - `bln-places.csv`: Contains publication title, collection, city, and 'Latitude,Longitude' for Burney and Nichols collections.
@@ -67,3 +68,16 @@ python -m src.preprocessing.ner
 ## Advertisement
 
 ## Geography
+### Article Extraction Based on Keywords
+Using pre-defined lists of goods and locations associated with colonial trade, we extract articles that contain at least one keyword. These articles are saved along with their metadata
+```sh
+python -m src.preprocessing.detect_words
+```
+
+### Count Co-occurence Between Goods and Locations
+We analyze the co-occurrence of goods and locations to further explore the representation of colonial goods in relation to specific geographic regions.
+```sh
+python -m src.EDA.get_cooccurence_frequencies
+```
+
+### Use Co-occurence Data to Generate Geographic Maps
