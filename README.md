@@ -80,6 +80,10 @@ python -m src.EDA.generate_advertisement_noun_adj_list
 ```
 
 ### Secondary Literature
+Burke, Edmund. 1784. Mr. Burke’s Speech, On the 1st December 1783, upon the Question for the Speaker’s Leaving the Chair, in Order for the House to Resolve Itself into a Committee on Mr. Fox’s East India Bill. London: Printed for J. Dodsley, in Pall-Mall.
+
+Goodman, Rob. 2020. "‘The Low Principles of Jurisprudence’: Legal Indeterminacy in Edmund Burke’s Impeachment of Warren Hastings." The Review of Politics 82 (3): 459–83. https://doi.org/10.1017/S0034670520000364.
+
 Greaves, I. "The Character of British Colonial Trade. Journal of Political Economy", 1954, 62 (1), pp. 1-11, Stable URL: https://www.jstor.org/stable/1824983. 
 
 Ashworth, W. "Customs and Excise: Trade, Production and Consumption in England 1640– 1845", Oxford: Oxford University Press, 2003.
@@ -93,6 +97,8 @@ Berg, M. (2004). In Pursuit of Luxury: Global History and British Consumer Goods
 Greaves, I. (1954). The Character of British Colonial Trade. Journal of Political Economy, 62(1), 1–11. https://doi.org/10.1086/257456
 
 McCants, A. E. C. (2007). Exotic Goods, Popular Consumption, and the Standard of Living: Thinking about Globalization in the Early Modern World. Journal of World History, 18(4), 433–462. https://doi.org/10.1353/jwh.2008.0008
+
+Ng, Su Fang. 2019. "Indian Interpreters in the Making of Colonial Historiography: New Light on Mark Wilks’s Historical Sketches of the South of India (1810–1817)." The English Historical Review 134 (569): 821–54. https://doi.org/10.1093/ehr/cez213.
 
 Richardson, D. (1987). The slave trade, sugar, and British economic growth, 1748-1776. The Journal of Interdisciplinary History, 17(4), 739-769.
 
