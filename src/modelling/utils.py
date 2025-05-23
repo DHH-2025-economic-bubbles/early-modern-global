@@ -7,7 +7,7 @@ import pandas as pd
 from scipy.stats import gaussian_kde
 import matplotlib.patches as mpatches
 
-from settings import WORLD_COUNTRIES_FILE
+from settings import DECADE_HEATMAP, WORLD_COUNTRIES_FILE
 
 def create_yearly_heatmap_images(gdf, output_folder):
     """
@@ -19,7 +19,10 @@ def create_yearly_heatmap_images(gdf, output_folder):
     os.makedirs(output_folder, exist_ok=True)
     
     # Get unique years and sort them
-    years = sorted(gdf['year'].unique())
+    if DECADE_HEATMAP:
+        years = sorted(gdf['decade'].unique())
+    else:    
+        years = sorted(gdf['year'].unique())
     
     # Set up the colormap for heatmap
     colors = ['#000080', '#0000FF', '#00FFFF', '#00FF00', '#FFFF00', '#FF0000']
@@ -44,13 +47,16 @@ def create_yearly_heatmap_images(gdf, output_folder):
     # Create a distinctive color for each word of interest
     interest_word_colors = {
         "furs": "#e41a1c",      # red
+        "peltry": "#e41a1c",    # red (same as furs)
         "tobacco": "#377eb8",   # blue
         "rice": "#4daf4a",      # green
         "indigo": "#984ea3",    # purple
         "sugar": "#ff7f00",     # orange
         "rum": "#ffff33",       # yellow
         "molasses": "#a65628",  # brown
-        "negroes": "#f781bf"    # pink
+        "negroes": "#f781bf",   # pink (same as slave)
+        "slave": "#f781bf",     # pink 
+        "silk": "#cab2d6"       # light purple (new color)
     }
     
     # Process each year
@@ -58,7 +64,10 @@ def create_yearly_heatmap_images(gdf, output_folder):
         print(f"Processing year {year}...")
         
         # Filter data for this year
-        year_data = gdf[gdf['year'] == year]
+        if DECADE_HEATMAP:
+            year_data = gdf[gdf['decade'] == year]
+        else:
+            year_data = gdf[gdf['year'] == year]
         
         if len(year_data) < 5:  # Need at least 5 points for reliable KDE
             print(f"Skipping year {year}: Not enough data points ({len(year_data)})")

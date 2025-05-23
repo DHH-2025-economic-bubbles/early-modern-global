@@ -61,8 +61,8 @@ year_counts = person_df.groupby('year').size()
 print(year_counts)
 
 # Top mentioned people overall
-top_people = person_df['person'].value_counts().head(10)
-print("\nTop 10 Most Mentioned People:")
+top_people = person_df['person'].value_counts().head(100)
+print("\nTop 100 Most Mentioned People:")
 print(top_people)
 
 # Create a bar chart for top 10 people
@@ -83,19 +83,19 @@ for year in years:
     year_data = person_df[person_df['year'] == year]
     top_year_people = year_data['person'].value_counts().head(10)
     
-    if not top_year_people.empty:  # Check if we have data for this year
-        print(f"\nTop people in {int(year)}:")
-        print(top_year_people)
+    # if not top_year_people.empty:  # Check if we have data for this year
+    #     print(f"\nTop people in {int(year)}:")
+    #     print(top_year_people)
         
-        # Create a bar chart for top 10 people for this year
-        plt.figure(figsize=(12, 8))
-        top_year_people.plot(kind='bar', color='lightgreen')
-        plt.title(f'Top People Mentioned in {int(year)}')
-        plt.xlabel('Person')
-        plt.ylabel('Number of Mentions')
-        plt.xticks(rotation=45, ha='right')
-        plt.tight_layout()
-        plt.savefig(f'top_people_{int(year)}.png')
+        # # Create a bar chart for top 10 people for this year
+        # plt.figure(figsize=(12, 8))
+        # top_year_people.plot(kind='bar', color='lightgreen')
+        # plt.title(f'Top People Mentioned in {int(year)}')
+        # plt.xlabel('Person')
+        # plt.ylabel('Number of Mentions')
+        # plt.xticks(rotation=45, ha='right')
+        # plt.tight_layout()
+        # plt.savefig(f'top_people_{int(year)}.png')
 
 # Heatmap of top 20 people across years
 top_20_overall = person_df['person'].value_counts().head(20).index.tolist()

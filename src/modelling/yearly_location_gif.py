@@ -1,7 +1,7 @@
 import os
 import re
 from PIL import Image
-
+from settings import DECADE_HEATMAP
 from settings import FINDINGS_FOLDER
 
 def create_gif_from_yearly_pngs(input_folder='yearly_heatmaps', 
@@ -147,11 +147,10 @@ if __name__ == "__main__":
     # Create basic GIF (1 second per frame)
     print("Creating basic animated GIF...")
     create_gif_from_yearly_pngs(
-        input_folder=FINDINGS_FOLDER/'year_heatmap',
-        output_path=FINDINGS_FOLDER/'heatmap_animation.gif',
+        input_folder=FINDINGS_FOLDER/'year_heatmap_goods_decade',
+        output_path=FINDINGS_FOLDER/'heatmap_animation_goods_decade.gif',
         duration=500
     )
     
     print("Done! Created two GIF files:")
     print("- heatmap_animation.gif (basic animation)")
-    print("- heatmap_fade_animation.gif (with smooth transitions)")

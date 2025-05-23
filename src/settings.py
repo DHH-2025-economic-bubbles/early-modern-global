@@ -14,3 +14,5 @@ TRADE_GAZETEER_RAW = DATA_FOLDER / "1300_owtrad_20250515_115842.json"
 WORLD_COUNTRIES_FILE = DATA_FOLDER/"ne_50m_admin_0_countries/ne_50m_admin_0_countries.shp"
 
 BRITISH_COLONIAL_TRADE_PLACES_EAST = DATA_FOLDER / "filtered_trade_places.gpkg"
+
+DECADE_HEATMAP = True

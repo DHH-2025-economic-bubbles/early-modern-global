@@ -13,8 +13,8 @@ from flashtext.keyword import KeywordProcessor
 from nltk.stem import PorterStemmer
 
 STEMMER: PorterStemmer = PorterStemmer()
+
 LIST_WORDS: List[str] = [
-    "furs",
     "tobacco",
     "rice",
     "indigo",
@@ -22,7 +22,8 @@ LIST_WORDS: List[str] = [
     "molasses",
     "negroes",
     "silk",
-    "peltry"
+    "peltry",
+    "slave"
 ]
 
 gpkg_path: Path = DATA_FOLDER / "filtered_places.gpkg" 
@@ -35,14 +36,26 @@ places_without_space = [s.replace(" ", "") for s in places_with_space]
 places_names = [s for s in places_names if s not in places_with_space]
 
 places_with_space_dict = {}
-for place_without_space, place_with_space in sorted(zip(places_without_space, places_with_space)):
+for place_without_space, place_with_space in zip(places_without_space, places_with_space):
     places_with_space_dict[place_without_space] = place_with_space
+places_without_space_stemmed = [STEMMER.stem(word) for word in places_without_space]
+
 
 LIST_WORDS.extend(places_names)
 
 LIST_WORDS = [word.lower() for word in LIST_WORDS]
+LIST_WORDS_STEMMED = [STEMMER.stem(word) for word in LIST_WORDS]
+
+listwords_dict = {}
+for word, stemmed in zip(LIST_WORDS, LIST_WORDS_STEMMED):
+    listwords_dict[stemmed] = word
+
+listspacewords_dict = {}
+for word, stemmed in zip(places_with_space, places_without_space_stemmed):
+    listspacewords_dict[stemmed] = word
 
 OUTPUT_PATH: Path = DATA_FOLDER / "detect_words.jsonl"
+
 
 #OUTPUT_PATH = DATA_FOLDER / "detect_words_test.jsonl"
 
@@ -58,27 +71,29 @@ def get_json_files(root_folder:Path)->List[Path]:
     
     return json_files
 
-
 def detect_words_json_files(json_file: Path) -> Optional[Dict[str, Any]]:
     with open(json_file, 'r', encoding='utf-8') as f:
         data: dict = json.load(f)
 
-        data["found_words"] = []
-        for text in data['texts']:
+        # Change to dictionary where keys are text indices
+        data["found_words"] = {}
+        
+        for idx, text in enumerate(data['texts']):
             text = keyword_processor.replace_keywords(text)
             words_data: Set[str] = set(text.lower().split())
+
+            words_data = {STEMMER.stem(word) for word in words_data}
             
             found_words: List[str] = []
-            for word in LIST_WORDS:
+            for word in LIST_WORDS_STEMMED:
                 if word in words_data:
-                    found_words.append(word)
-            for word in places_without_space:
+                    found_words.append(listwords_dict[word])
+            for word in places_without_space_stemmed:
                 if word in words_data:
-                    found_words.append(places_with_space_dict[word])
+                    found_words.append(listspacewords_dict[word])
             
-            if not found_words:
-                continue
-            data["found_words"].append(found_words)
+            if found_words:  # Only add entries with found words
+                data["found_words"][str(idx)] = found_words  # Use string keys for JSON compatibility
 
         if not data["found_words"]:
             return None  

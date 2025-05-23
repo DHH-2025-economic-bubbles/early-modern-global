@@ -86,6 +86,9 @@ def main() -> None:
     print(f"Metadata dictionary created with {len(meta_dict_lookup)} entries")
     
     for i, batch in enumerate(batches, 1):
+
+        if i < 80:
+            continue
         print(f"Processing chunk {i}/{number_batches} with {len(batch)} files...")
         
         with multiprocessing.Pool() as pool:

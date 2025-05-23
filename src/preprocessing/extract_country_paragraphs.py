@@ -8,7 +8,8 @@ from functools import partial
 from settings import DATA_FOLDER
 
 CLEANED_ARTICLES_FOLDER = DATA_FOLDER/"cleaned_articles/"
-THRESHOLD = 5
+THRESHOLD = 2
+PARAGRAPH_THRESHOLD = 2
 
 def process_line(line, india_places, output_dir, cleaned_articles_folder):
     data = json.loads(line.strip())
@@ -23,14 +24,18 @@ def process_line(line, india_places, output_dir, cleaned_articles_folder):
     india_paragraph_indexes = []  # Track paragraph indexes with Indian words
     
     for paragraph_index, words in found_words_dict.items():
+        paragraph_india_count = 0
         for word in words:
             if word in india_places:
                 india_place_count += 1
-                india_paragraph_indexes.append(paragraph_index)
-                break  # Only count each paragraph once
-    
+                paragraph_india_count += 1
+                
+            
+        if paragraph_india_count > PARAGRAPH_THRESHOLD:
+            india_paragraph_indexes.append(paragraph_index)
+
     # Only process the file if it meets or exceeds the threshold
-    if india_place_count >= THRESHOLD:
+    if india_place_count >= THRESHOLD and india_paragraph_indexes:
         filename = data['file_name']
         
         # Open the source JSON file to extract specific texts

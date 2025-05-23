@@ -9,30 +9,11 @@ import geopandas as gpd
 
 
 
-# sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
-# dictionary_path = pkg_resources.resource_filename("symspellpy", "frequency_dictionary_en_82_765.txt")
-# sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
 
 
-# def clean_text(text):
-#     text = ftfy.fix_text(text)
-#     text = remove_punctuation(text)
-#     text = join_hyphenated_words(text)
-#     text = normalize_newlines(text)
-#     text = remove_standalone_hyphens(text)
-#     text = remove_hyphen_start_line(text)
-    
-#     sentences = re.split(r'(?<=[.!?])\s+', text)
-#     corrected = ""
-#     for sentence in sentences:
-#         suggestion = sym_spell.lookup_compound(sentence, max_edit_distance=1)
-#         if suggestion:
-#             corrected += suggestion[0].term + " "
-#         else:
-#             corrected += sentence + " "
-#     corrected = corrected.lower()
-#     return corrected.strip()
-
+sym_spell = SymSpell(max_dictionary_edit_distance=2, prefix_length=7)
+dictionary_path = pkg_resources.resource_filename("symspellpy", "frequency_dictionary_en_82_765.txt")
+sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
 
 
 # Precompile patterns for better performance
@@ -48,8 +29,15 @@ def clean_text(text: str) -> str:
     text = HYPHENATED_WORDS_PATTERN.sub(r'\1\2', text)
     text = NEWLINES_PATTERN.sub(' ', text)
     text = HYPHENS_PATTERN.sub(' ', text)
+
+    suggestion = sym_spell.lookup_compound(text, max_edit_distance=2)
+    if suggestion:
+        corrected = suggestion[0].term
+    else:
+        corrected = text
+
     
-    return text.lower().strip()
+    return corrected.lower().strip()
 
 
 def remove_punctuation(text: str) -> str:
